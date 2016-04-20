@@ -1,0 +1,256 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+  body {
+  	font-family: "Avenir Next", Helvetica, Arial, sans-serif;
+  	padding:1em;
+  	margin:auto;
+  	max-width:42em;
+  	background:#fefefe;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+  	font-weight: bold;
+  }
+  
+  h1 {
+  	color: #000000;
+  	font-size: 30pt;
+  }
+  
+  h2 {
+  	border-bottom: 1px solid #CCCCCC;
+  	color: #000000;
+  	font-size: 26px;
+  }
+  
+  h3 {
+  	font-size: 20px;
+  }
+  
+  h4 {
+  	font-size: 18px;
+  }
+  
+  h5 {
+  	font-size: 16px;
+  }
+  
+  h6 {
+  	color: #777777;
+  	background-color: inherit;
+  	font-size: 16px;
+  }
+  
+  hr {
+  	height: 0.2em;
+  	border: 0;
+  	color: #CCCCCC;
+  	background-color: #CCCCCC;
+  }
+  
+  p, blockquote, ul, ol, dl, li, table, pre {
+  	margin: 15px 0;
+  }
+  
+  a, a:visited {
+  	color: #4183C4;
+  	background-color: inherit;
+  	text-decoration: none;
+  }
+  
+  #message {
+  	border-radius: 6px;
+  	border: 1px solid #ccc;
+  	display:block;
+  	width:100%;
+  	height:60px;
+  	margin:6px 0px;
+  }
+  
+  button, #ws {
+  	font-size: 12pt;
+  	padding: 4px 6px;
+  	border-radius: 5px;
+  	border: 1px solid #bbb;
+  	background-color: #eee;
+  }
+  
+  code, pre, #ws, #message {
+  	font-family: Monaco;
+  	font-size: 12pt;
+  	border-radius: 3px;
+  	background-color: #F8F8F8;
+  	color: inherit;
+  }
+  
+  code {
+  	border: 1px solid #EAEAEA;
+  	margin: 0 2px;
+  	padding: 0 5px;
+  }
+  
+  pre {
+  	border: 1px solid #CCCCCC;
+  	overflow: auto;
+  	padding: 4px 8px;
+  }
+  
+  pre > code {
+  	border: 0;
+  	margin: 0;
+  	padding: 0;
+  }
+  
+  #ws { background-color: #f8f8f8; }
+  
+  .send { color:#77bb77; }
+  .server { color:#7799bb; }
+  .error { color:#AA0000; }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+  <script>
+  
+  $( document ).ready(function() {
+  	$( "#accordion" ).accordion({
+  	heightStyle: "content",
+  	collapsible: true
+  	});
+  });
+  </script>
+  
+  <style>
+  .ui-widget-content a {
+      color: #00F;
+  	}
+  .nav a {
+  background-color: blue;
+  color: white;
+  padding: 4px;
+  line-height: 2em;
+  }
+  
+  h4 {
+  text-decoration:underline;
+  }
+  
+  </style>
+</head>
+<body>
+<h2 id="eawag-research-data-management-project">Eawag Research Data Management Project</h2>
+<p><img src="./eawag_rdm.png" width="100%" /></p>
+<div id="accordion">
+<h3 id="summary">Summary</h3>
+<div>
+<p>A central research data repository is being established at Eawag. It will provide intermediate- and long-term storage for datasets of all research groups. The software will be tailored to the specific needs of the researchers at the work group level and is being developed in close interaction with the users. Besides the repository itself, the project will also provide guidelines, training and ancillary tools and services to support researchers with their data-management and -handling needs.</p>
+</div>
+<h3 id="objectives">Objectives</h3>
+<div>
+<p><strong>1. Provide better support to the scientists to fulfill their data management duties.</strong></p>
+<ul class="incremental">
+<li>Provide a central research storage and archiving facility, including long-term maintenance and support.</li>
+<li>Support departmental data managers and scientists in organizing, documenting, uploading and accessing data using this facility.</li>
+</ul>
+<p><strong>2. Provide guidance for the robust, person-independent and standards-compliant handling of research data.</strong></p>
+<p><strong>3. Exploit the collateral benefits of a central data-management platform</strong></p>
+</div>
+<h3 id="guiding-principles">Guiding Principles</h3>
+<div>
+<ul class="incremental">
+<li><strong>For the scientists, data-management should be a well-defined, simple and quickly executed routine task.</strong></li>
+<li>Ensure longevity and interoperability of the software by adhering to established standards.</li>
+<li>Ensure the practicability of software and processes by continuous user-involvement at every stage.</li>
+<li>Ensure compatibility with established meta-data standards.</li>
+<li>Strive for collaboration with related initiatives within the ETH domain and at other research institutions.</li>
+</ul>
+</div>
+<h3 id="deliverables">Deliverables</h3>
+<div>
+<p class="nav">
+<a href="#eawag-research-data-platform">Eawag Research Data Platform</a> <a href="#metadata-schemes">Metadata Schemes</a> <a href="#research-data-management-guidelines">RDM Guidelines</a> <a href="#support-activities">Support Activities</a>
+</p>
+<h4 id="eawag-research-data-platform-erdp">Eawag Research Data Platform (ERDP) <a href="#deliverables">↑</a></h4>
+<p>The project will establish an institution-wide central research data repository. The repository will be accessible to all Eawag research groups to</p>
+<ol class="incremental" style="list-style-type: decimal">
+<li>store and maintain their own datasets, to</li>
+<li>search the repository content, and</li>
+<li>to retrieve datasets</li>
+</ol>
+<p>The repository is based on the well-established open-source data-management software <a href="http://ckan.org">CKAN</a>. While CKAN is being used by many organizations around the world in an <a href="https://en.wikipedia.org/wiki/Open_data">“OpenData”</a> context, its use as a research data management tool requires the development of custom-tailored extensions that adapt CKAN to the specific needs at Eawag.</p>
+<p><strong>Features of the ERDP will include:</strong></p>
+<ul class="incremental">
+<li>a batch upload facility</li>
+<li>customized interfaces for data submission</li>
+<li>spatial and temporal search across all datasets</li>
+<li>search for other dataset attributes and global full-text search</li>
+<li>preview for suitable datasets (as table, map, or graph)</li>
+<li>ERDP will act as staging area for submitting datasets to other repositories and for registering a Digital Object Identifier (DOI).</li>
+</ul>
+<p>[A link to more technical information to be provided later on GitHub]</p>
+<h4 id="metadata-schemes">Metadata Schemes <a href="#deliverables">↑</a></h4>
+<p>Development of a metadata structure that is</p>
+<ul class="incremental">
+<li>compatible, to the degree possible, with international standards, such as the <a href="https://de.wikipedia.org/wiki/Dublin_Core">Dublin Core</a>, <a href="http://www.w3.org/standards/techs/rdf">RDF</a> and <a href="http://www.w3.org/TR/vocab-dcat/">DCAT</a>.</li>
+<li>covers the requirements for all data stored at Eawag,</li>
+<li>will be extended as needed, and</li>
+<li>is compliant to the extent possible with common requirements of external services, such as <a href="https://www.datacite.org/">dataCite</a>, <a href="http://www.pangaea.de/">PANGAEA</a>, or <a href="http://figshare.com">figshare</a>.</li>
+</ul>
+<h4 id="research-data-management-guidelines">Research Data Management Guidelines <a href="#deliverables">↑</a></h4>
+<p>The repository roll-out will be accompanied by the development of data-management guidelines. These guidelines will be developed with user-input in an iterative fashion and compliance will be supported by the actual software implementation. The content of the guidelines presumably specifies the precise meta-data requirements, the types of datasets that should be submitted to the repository, rules for write-access to the repository and similar topics. See the <a href="http://www.nerc.ac.uk/research/sites/data/policy/data-value-checklist.pdf">NERC Data Value Checklist</a> as an example of important considerations about which data to archive.</p>
+<h4 id="support-activities">Support activities <a href="#deliverables">↑</a></h4>
+<p>Research groups will receive support to streamline their data submission procedures. This includes case-by-case analysis of current workflow and requirements, support with structuring, formatting, annotation, uploading, searching and downloading, the provision of software to automate such tasks, if applicable, and the cooperative development of specific meta-data schemes.</p>
+</div>
+<h3 id="background">Background</h3>
+<div>
+<p>The <a href="http://www.eawag.ch/fileadmin/Domain1/About/Arbeiten/Forschungsumfeld/integritaet_forschung.pdf">Eawag Guidelines for Good Scientific Practice</a> assigns to a research project’s PI the responsibility for data management. In particular that includes ensuring the data’s safe (person-independent) storage and accessibility for a prolonged time period, coming up with a suitable set of metadata and the respective annotation of datasets, care against misuse of data by temporary or external collaborators, and transfer of their own knowledge and data if they leave Eawag.</p>
+<p>In practice, secure storage and retrievability handled individually in each workgroup is riddled with difficulties. Fluctuating scientific staff, diverse storage locations, ad-hoc or missing meta-data schemes are among the reasons for sub-optimal storage of often irreplaceable and non-reproducible datasets that were produced at substantial cost.</p>
+<p>In general, individually carried out proper mid- and long-term storage and archival of research data requires an undue amount of effort, time and know-how outside their respective research area from the scientist in charge, whose time would be much better spent for doing research.</p>
+<p>Therefore, the natural strategy is the establishment of a professionally managed central data repository. This goes hand in hand with the establishment of data-management procedures that can be followed “blindly”.</p>
+<p>It is also a coming trend that research funders will require a <a href="http://data.research.cornell.edu/content/data-management-planning">data management plan</a> as a required part of research proposals. The Eawag research data management guidelines and platform will be adapted to support the researchers in fulfilling these requirements.</p>
+</div>
+<h3 id="people">People</h3>
+<div>
+Project lead: <a href="http://www.eawag.ch/de/ueberuns/portraet/organisation/mitarbeitende/profile/harald-von-waldow/">Harald von Waldow</a><br />
+Steering Group: <a href="http://www.eawag.ch/de/ueberuns/portraet/organisation/mitarbeitende/profile/jochen-bihn/">Jochen Bihn</a>, <a href="http://www.eawag.ch/de/ueberuns/portraet/organisation/mitarbeitende/profile/lothar-nunnenmacher/">Lothar Nunnenmacher</a>, <a href="http://www.eawag.ch/de/ueberuns/portraet/organisation/mitarbeitende/profile/gabriel-piepke/">Gabriel Piepke</a>, <a href="http://www.eawag.ch/de/ueberuns/portraet/organisation/mitarbeitende/profile/peter-reichert/">Peter Reichert</a>, <a href="http://www.eawag.ch/de/ueberuns/portraet/organisation/mitarbeitende/profile/raoul-schaffner/">Raoul Schaffner</a>, <a href="http://www.eawag.ch/de/ueberuns/portraet/organisation/mitarbeitende/profile/rosi-siber/">Rosi Siber</a>
+</div>
+<h3 id="pilot-phase-march-2016---december-2016">Pilot Phase (March 2016 - December 2016)</h3>
+<div>
+<p>During the pilot-phase the platform will become available to all Eawag groups in order to test the system against real-world use-cases and to adapt it to individual requirements. This phase will include individual meetings with research group representatives (“Data Managers”) to collect user-feedback and to help refine the system towards a state where it can be routinely used as a standard service. In particular, that will include the development of user specific client-side software to facilitate data preparation and upload. An equally important aspect during that phase is the ability of the users to actively influence the system’s development in terms of features, capabilities and modes of access.</p>
+<p>Since significant changes to the system will most likely be necessary at that stage, we can neither guarantee the stability of the database structure nor adequate data-security. That means that data delivered to the platform still should be backed up somewhere else. However, we will take care that the work that goes into data-preparation and packaging during the pilot-phase will not be lost and that re-uploading to the final system will be trivial. We will also help with interim-solutions regarding backup, if necessary.</p>
+</div>
+<h3 id="co-operation-with-other-projects">Co-operation with other projects</h3>
+<div>
+<p>We aim to connect with related initiatives within the ETH-domain and Swiss universities. Currently we are in contact with WSL. With regard to the software, we are part of the global CKAN developer community.</p>
+</div>
+<h3 id="time-line">Time-line</h3>
+<table>
+<tbody>
+<tr class="odd">
+<td align="left"><strong>Mar. 2015</strong></td>
+<td align="left">Basic CKAN customization begins.</td>
+</tr>
+<tr class="even">
+<td align="left"><strong>Dec. 2015</strong></td>
+<td align="left">Customization based on “real data” begins.</td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>Mar. 2016</strong></td>
+<td align="left">Start of <a href="" onClick="$('#accordion').accordion('option', 'active', 6); return false;">pilot phase</a></td>
+</tr>
+<tr class="even">
+<td align="left"><strong>Jan. 2017</strong></td>
+<td align="left">Operational phase.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>

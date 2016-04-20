@@ -1,0 +1,3 @@
+# presentation lunch-seminar
+* TODO fileteypes excel/world -> float
+

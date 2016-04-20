@@ -1,0 +1,251 @@
+ /**
+ * White theme for reveal.js. This is the opposite of the 'black' theme.
+ *
+ * By Hakim El Hattab, http://hakim.se
+ */
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+@import url(../../lib/font/source-sans-pro/source-sans-pro.css);
+
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: #fff;
+
+$mainColor: #222;
+$headingColor: #222;
+
+$mainFontSize: 38px;
+$mainFont: 'Source Sans Pro', Helvetica, sans-serif;
+$headingFont: 'Source Sans Pro', Helvetica, sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: uppercase;
+$headingFontWeight: 600;
+$linkColor: #2a76dd;
+$linkColorHover: lighten( $linkColor, 15% );
+$selectionBackgroundColor: lighten( $linkColor, 25% );
+
+$heading1Size: 2.5em;
+$heading2Size: 1.6em;
+$heading3Size: 1.3em;
+$heading4Size: 1.0em;
+
+section.has-dark-background {
+  &, h1, h2, h3, h4, h5, h6 {
+    color: #fff;
+  }
+}
+
+$eawblue1: #045A78;
+$eawred1: #F68B1F;
+$lightblue: #E7F0FB;
+
+
+@mixin raw_img {
+  margin: 0;
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+
+/* litte quadratic image in front of paragraph */
+@mixin preimg($url) {
+  content: "";
+  display: inline-block;
+  width: 1.6ex;
+  height: 1em;
+  background-size: 1.5ex 1.5ex;
+  background-repeat: no-repeat;
+  background-position: 0% 100%;
+  background-image: url($url);
+} 
+
+html.title .slide-background {
+  @include raw_img;
+  /* background-size: 100% 100%; */
+  background-size: contain;
+}
+
+img.logo {
+  @include raw_img;
+  width: 35%;
+  position:fixed;
+  left:0px;
+}
+
+.alert {
+  color: $eawred1;
+}
+
+ol.twocolslist {
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+  list-style-position: inside;
+  li {
+    float: left;
+    width: 100%;
+  }
+}
+
+@mixin titletext {
+  color: #222;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-transform: uppercase;
+  text-shadow: none;
+  word-wrap: break-word;
+  right: 0;
+  position: absolute;
+}
+    
+.reveal {
+  section {
+    .maintitle_l1 {
+      @include titletext;
+      font-size: 1.6em;
+      float:right;
+      text-align: right;
+      width: 50%;
+      bottom: 400px;
+    }
+    .maintitle_l2 {
+      @include titletext;
+      font-size: 1.0em;
+      bottom: 300px;
+    }
+    .authordate {
+      font-size: 0.6em;
+      position:absolute;
+      bottom: 0px;
+      left: 0px;
+      font-family: mono;
+      color: $eawblue1;
+    }
+    .lonesectitle {
+      margin-top: 70px;
+    }
+    img {
+      @include raw_img;
+    }
+    .rawimg {
+      @include raw_img;
+    }
+    img.preimgfloat {
+      @include raw_img;
+      float:left;
+      height: 2em;
+      margin-right: 1ex;
+    }
+    img.full {
+      @include raw_img;
+      position:absolute;
+      left: 0px;
+      right: 0px;
+      top: 0px;
+      width: 100%;
+      height: 100%;
+    }
+    p.benefit::before {
+      @include preimg('../../assets/Plus_in_circle.svg');
+    }
+    p.drawback::before {
+      @include preimg('../../assets/Minus_in_circle.svg');
+    }
+    .ckan::before {
+      @include preimg('../../assets/ckan-logo0.svg');
+    }
+    .ivenio::before {
+      @include preimg('../../assets/ivenio-logo.png');
+    }
+    .islandora::before {
+      @include preimg('../../assets/islandora-logo.png');
+    }
+    .dspace::before {
+      @include preimg('../../assets/dspace-logo.png');
+    }
+    .dataverse::before {
+      @include preimg('../../assets/dataverse-logo.png');
+    }
+    .box {
+      border-style: solid;
+      border-width: 2px;
+    }
+    .exampletext {
+      font-family: mono;
+      font-size: smaller;
+      text-align: left;
+      background-color: $lightblue;
+    }
+    div.rightcolumn  {
+      width: 500px;
+      height: 750px;
+      margin-top: -10px;
+      float: right;
+    }
+    div.leftcolumn {
+      width: 500px;
+      height: 670px;
+      margin-top: 70px;
+    }
+    blockquote {
+      font-size: 0.8em;
+      background-color: $lightblue;
+      width: 85%;
+    }
+    p {
+      text-align: left;
+    }
+    div.full {
+      width: 1024px;
+      height: 768px;
+      position: absolute;
+      top: -7px;
+    }
+    ul {
+      ul {
+	font-size: smaller;
+      }
+    }
+  }
+}
+
+/* .reveal section .rightcolumn img { */
+/*     @include raw_img; */
+/*     height: 650px; */
+/*     /\* width: 49%;		 *\/ */
+/*     /\* position: relative; *\/ */
+/*     /\* top: -22px; *\/ */
+/* } */
+
+/* .reveal section .rightcolumn .text { */
+/*     /\* position: relative; *\/ */
+/*     /\* left: 2em;; *\/ */
+/*     /\* top: -22px; *\/ */
+/*     text-align: left; */
+/*     background-color: blue; */
+/* } */
+
+
+
+/* reveal .rightcolumn { */
+/*     border-style:solid; */
+/*     border-width:2px; */
+/*     width: 30%; */
+/*     text-align:left; */
+/*     top:40px; */
+/* } */
+
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
