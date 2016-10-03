@@ -221,22 +221,53 @@ json2list_fields = [
 	</div>
       </div>
     </section>
+    <section>
+      <h4 class="lonesectitle"><span class="alert">Client</span> side scripts</h4>
+      <p align="left">
+       <span class="exampletext">resup.py [-h] {put,get,list,del} ...</span>
+	<ul class="condensed">
+	  <li>Batch upload of resources to data package in CKAN.</li>
+	  <li>Batch download and deletion from data package in CKAN.</li>
+	</ul>
+      </p>
+      <p align="left">
+	<b><a href="https://github.com/eawag-rdm/resup">resup</a></b> handles compression, creation of a tar-archive,
+	checksumming, splitting of large files for upload, and
+	re-assemblage of thusly splitted files upon download.
+      </p><p align="left">
+	Resources to be downloaded or deleted can be specified by
+	providing a regular expression to select resource names.
+      </p>
+    </section>
+    <section>
+      <h4 class="lonesectitle">Large TODO-item: <span class="alert">georeferencing</span></h4>
+      <div class="rightcolumn fragment">
+	<img src="assets/florianm_spatial.png" class="rawimg"/>
+	<div>
+	  <img src="assets/florianm.png" width="100px" class="rawimg" align="middle"/>
+	  <a style="position:relative;top:-60px;" href="https://github.com/ckan/ckanext-spatial/pull/93">ckanext-spatial/pull/93</a>
+	</div>
+      </div>
+      <div class="leftcolumn" style="position:relative;top:-60px;">
+	<img class="rawimg" src="assets/spatial.png" />
+	<ul class="condensed">
+	  <li>copy & paste coordinates</li>
+	  <li>accept lat/lon, lon/lat, CH1903, CH1903+, ...</li>
+	  <li>parse degrees minutes (seconds) into decimal degrees</li>
+	  <li>graphical selection of locations</li>
+	  <li>points <mark>and</mark> lines <mark>and</mark> polygons</li>
+	</ul>
+      </div>
+
+    </section>
   </section>
-<!--       <div class="leftcolumn"> -->
-<!-- 	<p style="text-align:left;margin-top:-40px;"> -->
 
-<!-- 	  <pre style="width:115%;"> -->
-<!-- def eaw_schema_multiple_string_convert(typ) -->
-
-<!-- @scheming_validator -->
-<!-- def eaw_schema_multiple_choice(field, schema) -->
-
-<!-- #IPackageController -->
-<!-- def before_index(self, pkg_dict)</pre> -->
-<!-- 	</p> -->
-
-  
-  <section>
+  <!-- Amendements for search interface -->
+  <section>  
+    <section>
+      <h1>Amendments for the<br /><i class="alert">search interface</i></h1>
+    </section>
+    <section>
       <h4 class="lonesectitle"><span class="alert">Field specific</span> search</h4>
       <div style="float:left;">
 	<img src="assets/specific_search.png" class="rawimg" />
