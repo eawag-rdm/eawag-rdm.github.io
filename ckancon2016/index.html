@@ -1,0 +1,690 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CKAN for Research Data Management at Eawag: A report from the trenches</title>
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui"> -->
+  <link rel="stylesheet" href="css/reveal.css">
+  <link rel="stylesheet" href="css/theme/white.css">
+  <!-- Code syntax highlighting -->
+  <link rel="stylesheet" href="lib/css/zenburn.css">
+  <link rel="stylesheet" href="css/theme/eawag.css"
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+<div class="reveal">
+<div class="slides">
+  <img class="logo" src="assets/eaw-rdm1_inv.png"/>
+  
+  <!-- Title -->
+  <section data-background="assets/eawag_vorlage_blau_background.png" data-state="title">
+    <div class="full">
+      <div class="maintitle_l1">
+	<img style="vertical-align:-12px;" class="rawimg" src="assets/ckanlogo.png" />
+	for Research Data Management<br />
+	at Eawag
+      </div>
+      <div class="maintitle_l2">
+	&mdash;  a report from the trenches &mdash;
+      </div>
+      <div style="margin-top:600px;">CKANCon 2016</div>
+      <div class="authordate">
+	Harald von Waldow &lt;harald.vonwaldow@eawag.ch&gt; &mdash; 2016-10-04
+      </div>
+    </div>
+  </section>
+
+  <!-- The Project -->
+  <section>
+    <section>
+      <h1>The <i class="alert">Project</i></h1>
+    </section>
+    <section>
+      <p class="lonesectitle"><h3>Establish
+      an <i class="alert">institution-wide</i>, <i class="alert">central</i>
+      research data repository</h3></p>
+      <ul>
+	<li><mark>Compliance</mark> with Guidelines for Good Scientific Practice<br />(e.g., reproducibility, retention obligation)
+	<li><mark>Archival</mark> of unique unrepeatable measurements<br />(&asymp; everything in the environment)</li>
+	<li><mark> Data discovery</mark> and <mark>collaboration</mark><br />
+	  across working groups, departments (and institutions).</li>
+      </ul>
+    </section>
+    <section>
+      <div class="rightcolumn">
+      	<img class="rawimg" src="assets/forum-chriesbach.jpg" />
+	<img class="rawimg" src="assets/kb.jpg" />
+      </div>
+      <div class="leftcolumn">
+	<blockquote style="margin-top:120px;">Eawag is concerned with concepts and technologies
+	  for dealing sustainably with water bodies and with water as a
+	  resource.</blockquote>
+	<ul style="margin-top:120px;">
+	  <li>&sim; 500 staff in research, teaching and consulting</li>
+	  <li>12 research departments</li>
+	  <li>&sim; 70 research groups</li>
+	</ul>
+      </div>
+    </section>
+    <section>
+      <p class="lonesectitle"><h4>A very <span class="alert">heterogeneous</span> data-mixture</h4></p>
+      <div class="rightcolumn" style="margin-top:30px">
+	&nbsp;
+	<ul class="fragment">
+	  <li><mark>file-sizes: kB - 100s of GB</mark></li>
+	  <li><mark>#files per package: 1 - 100s</mark></li>
+	  <li>analyis scripts</li>
+	  <li>CSV, PDF, baroque Excel files</li>
+	  <li>binary data-logger output</li>
+	  <li>photographs, movies</li>
+	  <li>...</li>
+	</ul>
+      </div>
+      <div class="leftcolumn" style="margin-top:30px;text-align:left;">
+	<b class="exampletext">e.g.</b>
+	  <ul>
+	    <li>high performance<br />mass-spectometry</li>
+	    <li>genomics & transcriptomics</li>
+	    <li>hydrologic data</li>
+	    <li>species counts</li>
+	    <li>urban drainage<br />sensor networks</li>
+	    <li>surveys & questionaires</li>
+	    <li>simulation results</li>
+	  </ul>
+      </div>
+    </section>
+    <section>
+      <div class="rightcolumn">
+	<img class="rawimg" src="assets/package.png" width="65%"/>
+	<div style="margin-top:70px;" class="fragment" data-fragment-index="1">
+	  <img class="rawimg" src="assets/bunker.jpg" width="70%"/>
+	</div>
+      </div>
+      <div class="leftcolumn">
+	<p class="lonesectitle"><h4>Characteristics of <span class="alert">Packages</span> (= "<i>datasets</i>")</h4></p>
+	<ul>
+	  <li><mark>publication packages</mark></li>
+	  <li>raw data</li>
+	  <li>the workgroup "stock-data"</li>
+	</ul>
+	<div class="fragment" data-fragment-index="1">
+	  <p class="lonesectitle"><h4><span class="alert">Time horizons</span> for storage</h4></p>
+	  <ul>
+	    <li>mid-term: &sim; 10 years</li>
+	    <li>long-term: &sim; 100 years</li>
+	  </ul>
+	</div>
+      </div>
+    </section>
+  </section>
+  
+  <!-- The Challenge -->
+  <section>
+    <section>
+	  <h1>The <i class="alert">Challenge</i></h1>
+    </section>
+    <section>
+      <div class="rightcolumn" style="margin-right:-80px;">
+	<div style="text-align:left;" class="fragment">
+	  <img class="rawimg" width="75%" src="assets/scientists.jpg">
+	  <mark>submission process:</mark><br />
+	  <ul class="condensed">
+	    <li>quick </li>
+	    <li>simple</li>
+	    <li>intuitive</li>
+	  </ul><br />
+	  &rHar; ...
+	</div>
+      </div>
+      <div class="leftcolumn">
+	<img class="rawimg" src="assets/librarian.jpg">
+	<div style="text-align:left;">
+	  <mark>result:</mark><br />
+	  <ul class="condensed">
+	    <li>well annotated</li>
+	    <li>good file formats</li>
+	    <li>complete</li>
+	    <li>consistent</li>
+	  </ul>
+	</div>
+      </div>
+    </section>
+  </section>
+  
+  <!-- Data submission -->
+  <section>
+    <section>
+      <h1>Amendments for<br /><i class="alert">data submission</i></h1>
+    </section>
+    <section>
+      <h4 class="lonesectitle"><span class="alert">ckanext-scheming</span> is the thing!</h4>
+      <p align="left"><span class="exampletext">small amendments</span></p>
+      <div class="rightcolumn">
+	<img src="assets/help_default.png" class="rawimg" />
+	<img src="assets/taxa.png" data-fragment-index="1" class="rawimg fragment" />
+	<img src="assets/flags.png" data-fragment-index="2"class="rawimg fragment" />
+	<pre data-fragment-index="2" class="fragment">eaw_schema_conditional_multicheck.js</pre>
+      </div>
+      <div class="leftcolumn">
+	<ul style="position:relative;top:-40px;">
+	  <li>extensive help-modals</li>
+	  <li>(dynamic) default values</li>
+	  <li>ckanext-repeating<mark>.js</mark><br />[lcrnz-repeating.js]</li>
+	  <li data-fragment-index="1"class="fragment">line-by-line textareas</li>
+	  <li data-fragment-index="2"class="fragment">checkbox array with constraints</li>
+	</ul>
+      </div>
+    </section>
+    <section>
+      <h4 class="lonesectitle"><span class="alert">ckanext-scheming</span> is still the thing!</h4>
+      <p align="left"><span class="exampletext">more involved amendments</span><br />&nbsp;<br />
+	Use the <mark>SOLR DateRange field</mark>
+      </p>
+      <div style="float:left;">
+	<pre style="width:100%;">def vali_daterange(values)
+validate_solr_daterange.py</pre>
+      </div>
+      <div style="float:right;">
+	<img src="assets/timerange.png" class="rawimg" />
+      </div>
+      <div class="fragment">
+	<p style="clear:both;text-align:left;"><mark>Index JSON</mark> - store string</p>
+	<div style="float:left;">
+	  <pre style="width:115%;">
+def eaw_schema_multiple_string_convert(typ)
+
+@scheming_validator
+def eaw_schema_multiple_choice(field, schema)
+
+#IPackageController
+def before_index(self, pkg_dict)</pre>
+	</div>
+	<div style="float:right">
+	  <pre style="width:100%"><code class="python">
+json2list_fields = [
+  'substances',
+  'variables',
+  'systems'
+  'timerange',
+  'taxa',]</code></pre> 
+	</div>
+      </div>
+    </section>
+  </section>
+<!--       <div class="leftcolumn"> -->
+<!-- 	<p style="text-align:left;margin-top:-40px;"> -->
+
+<!-- 	  <pre style="width:115%;"> -->
+<!-- def eaw_schema_multiple_string_convert(typ) -->
+
+<!-- @scheming_validator -->
+<!-- def eaw_schema_multiple_choice(field, schema) -->
+
+<!-- #IPackageController -->
+<!-- def before_index(self, pkg_dict)</pre> -->
+<!-- 	</p> -->
+
+  
+  <section>
+      <h4 class="lonesectitle"><span class="alert">Field specific</span> search</h4>
+      <div style="float:left;">
+	<img src="assets/specific_search.png" class="rawimg" />
+      </div>
+      <ul class="condensed fragment" data-fragment-index="1">
+	<li><pre style="width:100%;">IPackageController:before_search</pre></li>
+	<li>parse custom search_params</li>
+	<li>into SOLR search-string</li>
+      </ul>
+      <p style="clear:both;"></p>
+      <pre class="fragment" data-fragment-index="1"><code data-trim data-noescape>
+def mk_field_queries(search_params):
+    '''
+    Customizes the fq-search-string so that query-terms
+    referring to the same <field> (e.g. "example_field") are combined
+    with logic operator taken from the value of OP_<field>,
+    e.g. "OP_example_field". Default for this operator is "AND" to
+    keep compatibility. The other possible value is "OR".
+    OP_<field> is removed from the querystring.
+    '''
+      </code></pre>
+    </section>
+  </section>
+<!--     <section> -->
+<!-- 	  <p>A <span class="alert">motivating example</span>:</p> -->
+<!-- 	  <div><pre class="html"><code style="max-height: 500px;" data-noescape data-trim> -->
+<!-- 		On <mark>Tue, Aug 25, 2015</mark> at 6:27 PM, Matthew MacLeod &lt;Matthew.MacLeod@aces.su.se&gt; -->
+<!-- wrote: -->
+
+<!-- Hey HvW… -->
+
+<!-- Recep and I have been working a bit on some ideas related to your -->
+<!-- Remoteness Index. -->
+
+<!-- <mark>It would help us a lot to have the raw data</mark> (as NetCDF files, for -->
+<!-- example) that underlie your Remoteness Index maps that you -->
+<!-- published in ES&T.  We are most interested in the map for the -->
+<!-- night-light emission scenario, but would be happy to have the raw -->
+<!-- data for the CROP scenario also. -->
+
+<!-- <mark>Do you still have those files backed up somewhere??</mark> -->
+
+<!-- Thanks!  -matt -->
+<!-- 	    </code></pre> -->
+<!-- 	  </div> -->
+<!-- 	</section> -->
+	
+<!-- 	<section> -->
+<!-- 	  <div style="float:right;"> -->
+<!-- 	    <img class="rawimg" src="assets/cd1.png" /> -->
+<!-- 	  </div> -->
+<!-- 	    <div style="width:50%"> -->
+<!-- 	      <p class="lonesectitle" ><span class="alert">Data Mangement Rule</span> at the time:</p> -->
+<!-- 	      <p ><ol class="exampletext"><li>Put your stuff on a CD.</li><li>Put CD into drawer in secretary's office.</li></ol></p> -->
+<!-- 	    </div> -->
+<!-- 	    <div> -->
+<!-- 	    <ul class="fragment"> -->
+<!-- 	      <li>CD not extremely good organized and documented.</li> -->
+<!-- 	      <li>Who in old workgroup would be willing to search and interpret that CD? (In case it it still working)</li> -->
+<!-- 	      <li>Workgroup will cease to exist soon.</li> -->
+<!-- 	    </ul> -->
+<!-- 	  </div> -->
+<!-- 	</section> -->
+
+<!-- 	<section> -->
+<!-- 	  <div> -->
+<!-- 	    <p>My private <span class="alert">data management strategy</span> at the time:<p> -->
+
+<!-- 	    <pre><code class="bash">rsync -av /home/hvwaldow hvw@climstor.unibe.ch:/.../private/archive/phd</code></pre> -->
+<!-- 	    <br /> -->
+<!-- 	    <img style="float:right;position:relative;top:0px;" class="rawimg" src="assets/copy.png" height="260px"/> -->
+<!-- 	    <img class="fragment" width="680px;" style="position:absolute;top:150px;left:0px;" src="assets/sprechblase.png"> -->
+<!-- 	</section> -->
+<!-- 	<section> -->
+<!-- 	  <p class="lonesectitle"><span class="alert">recovery</span> ...</p> -->
+<!-- 	  <img class="rawimg" src="assets/example_tree.png" width="80%"/> -->
+<!-- 	</section> -->
+<!-- 	<section> -->
+<!-- 	  <p class="lonesectitle"><span class="alert">recovery</span> ...</p> -->
+<!-- 	  <div style="text-align:left;"> -->
+<!-- 	    <ul> -->
+<!-- 	      <li>find file (candidates).</li> -->
+<!-- 	      <li>don't find plotting routine.</li> -->
+<!-- 	      <li>re-write plotting routine.</li> -->
+<!-- 	      <li>compare with published figure.</li> -->
+<!-- 	      <li>document data</li> -->
+<!-- 	    </ul> -->
+<!-- 	  </div> -->
+<!-- 	  <pre class="html" style="width:100%"><code data-noescape>On Wed, <mark>Sep 16, 2015</mark> at 2:30 AM, Harald von Waldow &lt;harald@vonwaldow.ch&gt; wrote: -->
+<!-- Hi Matt & Recep, -->
+
+<!-- sorry for the delay again. You know how it is .. -->
+
+<!-- Please find attached an archive with 4 files: -->
+<!-- ..... -->
+<!-- ....</code></pre> -->
+<!-- 	</section> -->
+<!-- 	<section> -->
+<!-- 	  <div class="rightcolumn"> -->
+<!-- 	    <p>Feb 1, 2016:</p> -->
+<!-- 	    <img class="rawimg" width="100%" src="assets/matts_tweet.png" /> -->
+<!-- 	  </div> -->
+<!-- 	  <div class="leftcolumn"> -->
+<!-- 	    <p><span class="alert">H</span>appy <span class="alert">E</span>nd</p> -->
+
+<!-- 	    <div style="margin-top:200px"><mark>But that should have been a much faster procedure ...</mark></div> -->
+<!-- 	  </div> -->
+<!-- 	</section> -->
+<!-- 	<section> -->
+<!-- 	  <div style="text-align: left;"> -->
+<!-- 	  <p class="lonesectitle"> -->
+<!-- 	    <span class="alert">What data</span> to upload?</p> -->
+	  
+<!-- 	  <p> -->
+<!-- 	    E.g. <br /> -->
+<!-- 	    <ol> -->
+<!-- 	      <li>data that supplements a publication</li> -->
+<!-- 	      <li>raw - data</li> -->
+<!-- 	      <li>the workgroup "stock-data"</li> -->
+<!-- 	      <li> ... </li> -->
+<!-- 	      <li> ... </li> -->
+<!-- 	    </ol> -->
+<!-- 	    </p><p class="fragment" data-fragment-index="1"> -->
+<!-- 	      <b>Rule of thumb:</b> Everything that -->
+<!-- 	      is <mark>consistent</mark> and <mark>complete</mark> -->
+<!-- 	      enough and <mark>worth checking and documenting</mark> -->
+<!-- 	      to an extent that it stands for itself and could be used -->
+<!-- 	      by others without additional information. -->
+<!-- 	  </p> -->
+
+<!-- 	  <p class="fragment" data-fragment-index="1"> -->
+<!-- 	    <b>Details are going to be figured out individually.</b> -->
+<!-- 	  </p> -->
+<!-- 	  </div> -->
+<!-- 	</section> -->
+<!--       </section> -->
+      <section>
+      	<section>
+	  <h1>What <i class="alert">is it</i> then, exactly?</h1>
+	</section>
+	<section>
+	  <div class="rightcolumn">
+	    <img class="rawimg" src="assets/package.png" />
+	  </div>
+	  <div class="leftcolumn">
+	    <p style="text-align:center;"><b>A collection
+	    of<br /> <i><font class="alert">"Data
+	    Packages"</font></i></b></p>
+	    <p>
+  	      The system doesn't look into the files.</p>
+	    <p class="fragment drawback">
+	      no selection/search/analysis based directly on file content.</p>
+	    <p class="fragment benefit">
+	      technically, everything can be dumped into a package,
+	      without any pre-processing.</p>
+	    <p style="font-size:smaller" class="fragment">
+	      <img class="preimgfloat" src="assets/Microsoft_Excel_2013_logo.png">
+	      <img class="preimgfloat" src="assets/Microsoft_Word_2013_logo.png">
+	      Some file-formats should be avoided, though!
+	    </p>
+	  </div>
+	</section>
+	<section>
+	  <div class="rightcolumn">
+	    <div class="exampletext">
+	      authors: ...<br />
+	      date of submission: ...<br />
+	      temporal coverage: ...<br />
+	      spatial coverage: ...<br />
+	      status: ...<br />
+	    </div>
+	    <p class="exampletext fragment" data-fragment-index="1">
+	      Variables: ...<br />  Systems: ... <br/>
+	    </p>
+	    <img class="fragment rawimg" data-fragment-index="2"
+	    style="height:400px" src="assets/repo-standard-combo.png"
+	    />
+	  </div>
+	  <div class="leftcolumn">
+	    <p style="text-align:center;"><b>package = files
+	    + <span class="alert">meta-data</span></b></p>
+	    <p style="text-align:center;color:gray;"><b>"resources" = files</b></p>
+	    <ul>
+	      <li class="fragment" data-fragment-index="1">search for
+	      packages is based on meta-data.</li>
+	      <li class="fragment" data-fragment-index="2">interaction
+	      with other repositories and services relies on
+	      meta-data.</li>
+	      <li class="fragment" data-fragment-index="3">other
+	    	"meta-data", e.g., units of variables, should go into
+	    	a resource (= file).</li>
+	    </ul>
+	  </div>
+	</section>
+      </section>
+      <section>
+	<section>
+	  <h1>How is it <i class="alert">organized</i>?</h1>
+	</section>
+	<section>
+	  <div class="rightcolumn">
+	    <img class="rawimg" src="assets/organizations.png" />
+	  </div>
+	  <div class="leftcolumn">
+	    <div><b><span class="alert">"Organizations"</span><br />
+		=<br />
+		Departments<br />
+		or<br />
+		Research Groups</b>
+	    </div>
+	      <br />
+	    <p class="fragment" data-fragment-index="1">
+	      <b>Organizations</b> are, ideally, comparatively
+		 homogeneous with respect to data-management
+		 needs.</p>
+	  </div>
+	</section>
+	<section>
+	  <div class="rightcolumn" >
+	  <img class="rawimg" src="assets/collaboration.png" />
+	  </div>
+	  <div class="leftcolumn">
+	    <p><b class="alert">"Data Managers"</b>
+	      <ul>
+		<li>are the <span class="alert">link</span> between
+		researchers, the platform, and the project.</li>
+		<li class="fragment" data-fragment-index="1">are RDP
+		- administrators for their organization.</li>
+		<li class="fragment" data-fragment-index="2">number
+		preferably 1 - 3 per organization.</li>
+		<li class="fragment" data-fragment-index="3">ideally have</li>
+		<ul style="font-size:smaller;" class="fragment"
+		    data-fragment-index="3">
+		  <li>some data-handling skills.</li>
+		  <li>prolonged stay at Eawag.</li>
+		  <li>good overview of organizations'
+		  research-activities.</li>
+		</ul>
+	      </ul>
+	    </p>
+	  </div>
+	</section>
+      </section>
+      <section>
+	<h1>How does it <i class="alert">look</i> like?</h1>
+	<br />
+	<div>
+	<a href="http://eaw-ckan-dev1.eawag.wroot.emp-eaw.ch/dataset" target="_blank">
+	  <span style="font-family:mono;">http://eaw-ckan-dev1.eawag.ch</span>
+	</a>
+	</div>
+      </section>
+      <section>
+	<section>
+	  <h1>What about <i class="alert">automating</i> things?</h1>
+	</section>
+	<section>
+	  <p>
+	    CKAN has a <span class="alert">remote API</span> that
+	    exposes all of CKAN’s core features.</span></p>
+          <p>Access via http:<br />
+	    <a style="font-size:smaller;" href="http://eaw-ckan-dev1/api/3/action/package_search?fq=tags:fish" target="_blank">
+	      http://eaw-ckan-dev1/api/3/action/package_search?fq=tags:fish</a></p>
+          <p class="fragment" data-fragment-index="1">Used to
+          programmatically read, create and modify packages.</p>
+	  <div style="text-align:left;" class="fragment" data-fragment-index="1">
+	    <ul>
+	      <li>recuring tasks, e.g. regular updates</li>
+	      <li>batch upload of legacy data</li>
+	      <li>automatic validation</li>
+	      <li>interaction with other repositories</li>
+	    </ul>
+	  </div>
+       </section>
+       <section>
+         <pre style="width:100%;top:-50px;" class="bash"><code>
+        # sh
+
+        curl 'http://eaw-ckan-dev1.eawag.wroot.emp-eaw.ch/api/3/action/organization_list'
+        {"help": ... "result": ["aquatic-ecology", "aquatic-entomology",
+         "environmental-chemistry", "environmental-microbiology",
+        "fish-ecology-and-evolution", "gis-services", "it-services", ... ] }
+        </code></pre>
+	 
+         <pre style="width:100%;margin-top:-60px;"><code># Python
+		
+	from ckanapi import *
+			
+	ckanremote = RemoteCKAN("http://eaw-ckan-dev1.eawag.wroot.emp-eaw.ch",
+	             apikey=os.environ["CKAN_DEV1_APIKEY_HVW_ADM"])
+	pkg = ckanremote.action.package_show(id="reform")
+	print(pkg)</code></pre>
+		 
+		 <pre style="width:100%;margin-top:-5px;"><code>## R
+
+	> library('ckanr')
+	> ckanr_setup(url="http://eaw-ckan-dev1",key=Sys.getenv("CKAN_DEV1_APIKEY_HVW_ADM"))
+	> package_list(as="table")
+	 [1] "data-from-population..."
+	 [2] "record"
+          ...
+         </code></pre>
+         <p><span class="alert">Support for writing such client code</span> expected as major task during pilot-phase.</p> 
+         </section>
+         </section>
+       <section>
+	<section>
+	  <h1>How does it fit into the <i class="alert">technical
+	  ecosystem</i>?</h1>
+	</section>
+	<section>
+	  <div class="full"> 
+	    <img class="rawimg" src="assets/ecosystem.png" />
+	  </div>
+	</section>
+      </section>
+      <section>
+	<section>
+	  <h1>What<i class="alert">software</i> is that based on?</h1>
+	</section>
+	<section>
+	  <div class="full" style="background-color: white;">
+	    <img class="rawimg" src="assets/techstack.png" />
+	  </div>
+	</section>
+      </section>
+      <section>
+	<section>
+	  <h1>Time-line <span class="alert">&</span> Outlook</h1>
+	</section>
+	<section>
+	  <p class="lonesectitle"><b>March 21 &mdash; Dec
+	  31: <span class="alert">Pilot-Phase</span></b></p>
+	  <div style="text-align:left;"><ul>
+	      <li>Experimentation with various types of data.</li>
+	      <li>Debugging.</li>
+	      <li class="fragment"
+	      data-fragment-index="1"><span class="alert">User feedback </span>
+	      for further iterative RDP development.
+	      <li class="fragment"
+		  data-fragment-index="1"><span class="alert">User-specific
+		  development work</span>, e.g., client-side helper
+		  tools.</li>
+	      <li class="fragment"
+		  data-fragment-index="1"><span class="alert">Collaborative</span>
+		  development of workflows.</li>
+	      <li class="fragment" data-fragment-index="2">No data-safety!</li>
+	      <li class="fragment" data-fragment-index="2">No
+	      interface-stability!</li>
+	    </ul>
+	  </div>
+	   <!-- <b class="fragment" data-fragment-index="3">Monday 21.3 | -->
+	   <!-- FC-C20 | 14:00 - 16:00</b> -->
+	</section>
+	<section>
+	  <p class="lonesectitle"><b>New <span class="alert">features</span>
+	      until 2017</b></p>
+	  <div style="text-align:left;">
+	    <ul>
+	      <li>Significant development is planned to take place during
+		this year.</li>
+	      <li class="fragment" data-fragment-index="1">Some
+		features are already planned, but concrete
+		implementation and yet unknown needs will
+		emerge. E.g.:
+		<ul>
+		  <li class="fragment" data-fragment-index="1">version
+		  control for resources</li>
+		  <li class="fragment" data-fragment-index="1">strong backup</li>
+		  <li class="fragment"
+		    data-fragment-index="2">interfacing with public
+		    repositories (Zenodo, Dryad, ...)</li>
+		  <li class="fragment" data-fragment-index="2">public
+		  facing server / Open Data</li>
+		  <li class="fragment" data-fragment-index="3">ldap
+		  authentification</li>
+		  <li class="fragment"
+		  data-fragment-index="3">user-friendly spatial
+		  input</li>
+		  <li class="fragment" data-fragment-index="3">...</li>
+		</ul>
+	  </div>
+	  <b class="fragment" data-fragment-index="4">2016: The best
+	    year to <span class="alert">influence</span> future
+	    research data management practices at Eawag!</b>
+	</section>
+      </section>
+      <section>
+	<h1>Next <span class="alert">steps</span></h1>
+	<p>
+	  <ul>
+	    <li><b>Data-Managers</b>, <mark>email me</mark>: harald.vonwaldow@eawag.ch<br />
+	      I would like to be able to associate each group with a name by <mark>May 15, 2016</mark>.</li>
+	    <li>We will have <mark>workshops</mark> where I coach you through data-submission and collect your requirements.</li>
+	    <li><b>Everybody</b>: Search and download, <mark>submit bugs and requests</mark>:<br />
+	      <a href="https://github.com/eawag-rdm/eawag-ckan/issues" target="_blank">https://github.com/eawag-rdm/eawag-ckan/issues</a>.</li>
+	    <li>Have your say in the development: Subscribe
+	    to<br /><a href="https://sympa.ethz.ch/sympa/suboptions/eaw-rdm-discuss"
+		       target="_blank">eaw-rdm-discuss@sympa.ethz.ch</a></li>
+	  </ul>
+	      
+	</p>
+      </section>
+      <section>
+      	<div class="full" style="background:white;">
+      	  <h1><span class="alert">Q</span>uestions?</h1>
+      	  <br />
+      	  <img class="rawimg" width="50%" src="assets/cartoon.png" />
+      	</div>
+      </section>
+    </div>
+  </div>
+      
+<!-- ####################################################################### -->
+<!-- ####################################################################### -->
+<!-- ####################################################################### -->
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+    <script>
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Vertical centering of slides
+        center: true,
+        // Turns fragments on and off globally
+        fragments: true,
+        // Transition style
+        transition: 'convex', // none/fade/slide/convex/concave/zoom
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1024,
+        height: 768,
+        //width: 1090,
+        //height:1200,
+        // Factor of the display size that should remain empty around the content
+        margin: 0.03,
+        zoomKey: 'shift',
+        // Optional reveal.js plugins
+      dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true },
+          { src: 'plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+  </body>
+</html>
