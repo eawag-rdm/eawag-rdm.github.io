@@ -74,6 +74,7 @@ ol.twocolslist {
   bottom: 0px;
   left: 0px;
   font-family: mono;
+  text-align: left;
   color: #045A78; }
 
 .reveal section .lonesectitle {
