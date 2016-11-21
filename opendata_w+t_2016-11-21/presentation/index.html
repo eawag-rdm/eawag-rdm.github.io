@@ -26,46 +26,65 @@
 <div class="reveal">
 <div class="slides">
   <img class="logo" src="assets/eaw-rdm1_inv.png"/>
-  
   <section data-background="assets/eawag_vorlage_blau_background.png" data-state="title">
     <div class="full">
-      <div class="maintitle_l1">
-	Open Data for Eawag
+      <div class="maintitle_l1" style="width:60%;">
+	<i class="alert">Open Research Data</i><br /> @ Eawag
+      </div>
+      <div class="maintitle_l2">
+	&mdash; some quick &amp; dirty information &mdash;
       </div>
       <div class="authordate">
 	Harald von Waldow &lt;harald.vonwaldow@eawag.ch&gt; &mdash; 2016-11-21
       </div>
     </div>
   </section>
-
   <section>
     <section>
-      <h1>What kind of <i class="alert">Open Data?</i></h1>
-    </section>
-    <section>
-      <ol style="width:100%">
-	<li>Data to support a publication</li>
-	<li>Data as a service to the public</li>
-      </ol>
-      <div style="margin-top:3em; text-align:left;" class="fragment">
-	An example for 2. is the <a href="http://www.eawag.ch/de/abteilung/wut/schwerpunkte/chemie-wasserressourcen/naduf/">NADUF dataset</a>.<br />
-	Let's focus on 1: <mark>publication data</mark>.
-      </div> 
-    </section>
+      <h1>What kind of<br /> <i class="alert">Open</i> Research Data?</i></h1>
+</section>
+<section>
+  <div class="rightcolumn">
+    <p class="lonesectitle"><b>2. Data as a <span class="alert"><br 7>service to the public</span>:</b></p>
+    <ul>
+      <li>helps Eawag visibility</li>
+      <li>audience: the general public</li>
+      <li>presentation has to be thought through very carefully</li>
+      <li>Eawag Communications? political issues?</li>
+      <li>handling of updates?</li>
+      <li>Example: <a href="http://www.eawag.ch/de/abteilung/wut/schwerpunkte/chemie-wasserressourcen/naduf/">NADUF dataset</a></li>
+    </ul>
+   </div>
+  <div class="leftcolumn">
+    <p class="lonesectitle"><b>1. Data to support <span class="alert"><br/>a publication</span>:</b></p>
+  <ul>
+    <li>increasingly required by publishers / funding agency</li>
+    <li>audience: other researchers
+    <li>content and form are straight forward</li>
+    <li>can be treated much like "Supporting &nbsp;Information"</li>
+  </ul>
+</div>
+</section>
+
+<section>
+  <p class="lonesectitle" style="text-align:center;"><mark><b>1.</b> is much easier, let's focus on opening research data that accompanies a publication.</mark></p>
+</section>
   </section>
   <section>
     <section>
       <h1>Why <i class="alert">Open Publciation Data?</i></h1>
     </section>
     <section>
-    <ol style="width:100%">
-	<li>Required by publisher / funding agency</li>
-	<li>More <mark>citations</mark></li>
-	<li>More potential collaborators</li>
-	<li>Better visibility</li>
-	<li>Good scientific practice (reproducibility)</li>
-	<li>Moral obligation</li>
-      </ol>
+      <div style="text-align:center;">
+	<ol>
+	  <li>Required by publisher / funding agency</li>
+	  <li>More <mark>citations</mark></li>
+	  <li>More potential <mark>collaborators</mark></li>
+	  <li>Better <mark>visibility</mark></li>
+	  <li>Good scientific practice (<mark>reproducibility</mark>)</li>
+	  <li>Moral obligation</li>
+	</ol>
+      </div>
     </section>
   </section>
 
@@ -74,20 +93,37 @@
       <h1><i class="alert">How to prepare</i> Open Publciation Data?</h1>
     </section>
     <section>
-      <mark>WHY</mark> =  1.<br>
-      <ul>
-	<li>Fast, minimal effort to fulfill publisher's requirements.</li>
-      </ul>
-      <br />
-      <div style="margin-top:2em;">
-      <mark >WHY</mark> =  2. - 6.<br />
-      <ul>
-	<li>well documented</li>
-	<li>complete</li>
-	<li>"good" file formats</li>
-	<li>follow international standards</li>
-      </ul>
+      <div class="rightcolumn">
+	<mark>Rules of Thumb</mark>:
+  	<ul>
+  	  <li> Can a researcher build on this dataset without having to contact me?</li>
+  	  <li class="fragment" data-fragment-index="1">standardized and widely spread?</li>
+  	  <li class="fragment" data-fragment-index="1">implemented on several major operating systems?</li>
+  	  <li class="fragment" data-fragment-index="1">as simple as possible?</li>
+	  <li class="fragment" data-fragment-index="1">machine readable?</li>
+	  <li class="fragment" data-fragment-index="1">common in my field?</li>
+  	  <li class="fragment" data-fragment-index="1">not tainted by patents?</li>
+  	</ul>
       </div>
+      <div class="leftcolumn">
+  	<ul>
+  	  <li>well documented</li>
+  	  <li>complete</li>
+  	  <li class="fragment" data-fragment-index="1">"good" file formats</li>
+  	</ul>
+	<img class="rawimg fragment" style="width:70%;margin-top:2em" data-fragment-index="1" src="./assets/ExcelTrash.png" />
+      </div>
+    </section>
+    <section>
+      <p class="lonesectitle">A <i class="alert">common structure</i>:</p>
+      <ol style="font-size:80%;">
+	<li>raw <mark>data</mark> (e.g. straight from the logger, minimal cleaning/sorting)</li>
+	<li>pre-processed <mark>data</mark></li>
+	<li><mark>data</mark> directly underlying the figures and tables of the publciation</li>
+      	<li><mark>code</mark> for pre-processing</li>
+      	<li>analysis & plotting <mark>code</mark></li>
+	<li><mark>documentation</mark> ("README.txt")</li>
+      </ol>
     </section>
   </section>
 
@@ -96,37 +132,46 @@
       <h1><i class="alert">Where</i> to publish?</h1>
     </section>
     <section>
-      <mark>WHY</mark> =  1.<br>
-      <ul>
-	<li>Somewhere hidden, e.g. @ Elsevier or other publisher-run repository.</li>
-      </ul>
-      <div style="margin-top:2em;">
-      <mark >WHY</mark> =  2. - 6.<br />
-      <ol>
-	<li>Field specific, community-run, repo,
-	e.g. <a href="https://datadryad.org/">Dryad</a>
-	(life-sciences), <a href="https://www.pangaea.de/">Pangaea</a>
-	(Earth & Env. Science)</li>
-	<li>General purpose community run repo: <a href="https://zenodo.org/">Zenodo</a></li>
-      </ol>
+      <div style="text-align:left">	
+	<p><b><mark>Avoid publisher-run repositories!</mark></b><p>
+	
+	<ul>
+	  <li>not reliable</li>
+	  <li>limited findability</li>
+	  <li>usually no straight forward API</li>
+	</ul>
+      </div>
+      <br />
+      <div style="text-align:left">
+	<p><b>Prefer <mark>community-run and well established</mark> respositories</b><p>
+	
+	<ol>
+	  <li>Field specific repositories,<br />
+	    e.g. <a href="https://datadryad.org/">Dryad</a>
+	    (life-sciences), <a href="https://www.pangaea.de/">Pangaea</a>
+	    (Earth & Env. Science)</li>
+	  <li>Best general purpose repository: <a href="https://zenodo.org/">Zenodo</a></li>
+	</ol>
       </div>
     </section>
   </section>
-
+  
   <section>
     <section>
-      <h1>What about the<br /> <i class="alert">Eawag Research Data Platform</i>?</h1>
+      <h1>What about the<br /><div style="text-align:left"> E<i class="alert">awag</i><br />R<i class="alert">esearch</i><br />D<i class="alert">ata</i><br />P<i class="alert">latform</i>?</div></h1>
     </section>
     <section>
+      <div style="font-size:100%">
       <ul style="margin-top:2em;">
-	<li>Will hold a <i>data package</i> for <mark>each</mark> Eawag publication by default.</li>
-	<li>Its metadata are a superset of those usually required by external repositories.</li>
-	<li>Is anticipated to provide "Open Data" starting fall 2017.</li>
-	<li>Will provide a workflow that automatically handles submissions to Zenodo (and possibly other repos).</li>
+	<li>The ERDP will hold a <i>data package</i> for <mark>each</mark> Eawag publication by default.</li>
+	<li>Its metadata is a superset of that usually required by external repositories.</li>
+	<li>The expected quality &amp; format is identical to that expected by external repositories.</li>
+	<li>The ERDP will provide a workflow that (semi-)automatically handles submissions to Zenodo (and possibly other repos).</li>
 	<li><mark>Best strategy for your</mark>, now: Get in touch with me, submit
 	a data-package to
-	the <a href="https://eaw-ckan-dev1.eawag.wroot.emp-eaw.ch">ERDP</a>, and let me help with thes ubmission to Zenodo.</li>
+	the <a href="https://eaw-ckan-dev1.eawag.wroot.emp-eaw.ch">ERDP</a>, and let me help with the submission to Zenodo.</li>
       </ul>
+      </div>
     </section>
   </section>
   
@@ -717,8 +762,8 @@
 <!--       	  <img class="rawimg" width="50%" src="assets/cartoon.png" /> -->
 <!--       	</div> -->
 <!--       </section> -->
-<!--     </div> -->
-<!--   </div> -->
+</div>
+</div>
       
 <!-- <\!-- ####################################################################### -\-> -->
 <!-- <\!-- ####################################################################### -\-> -->
