@@ -22,6 +22,7 @@
   <![endif]-->
 </head>
 
+
 <body>
 <div class="reveal">
 <div class="slides">
@@ -122,8 +123,71 @@
 	<li><mark>data</mark> directly underlying the figures and tables of the publciation</li>
       	<li><mark>code</mark> for pre-processing</li>
       	<li>analysis & plotting <mark>code</mark></li>
-	<li><mark>documentation</mark> ("README.txt")</li>
+	<li><mark>documentation</mark> (e.g. a "README.txt", the manuscript)</li>
       </ol>
+    </section>
+    <section>
+      <p class="lonesectitle"><b>Licenses <i class="alert">&amp;</i> Legalese</b></p>
+      <p><b>1. Code</b><p>
+	<ul style="font-size:80%;">
+	  <li>Is subject to copyright.</li>
+	  <li>Make sure you apply a license to it, else nobody can fully use it in a scientific context.</li>
+	  <li>Make sure it is an <a href="https://opensource.org/licenses">OSI - approved</a> license.</li>
+	</ul>
+	<p><mark>Use the <a href="https://opensource.org/licenses/MIT">MIT
+	      License</a></mark>. If you want to use one of
+	the <mark><a href="https://www.gnu.org/licenses/license-recommendations.html">
+	      GNU Public Licenses</a></mark> instead, you already know that.</p>
+    </section>
+    <section>
+      <p class="lonesectitle"><b>Licenses <i class="alert">&amp;</i> Legalese</b></p>
+      <p><b>2. Text</b><p>
+	<ul style="font-size:80%;">
+	  <li>Is subject to copyright.</li>
+	  <li>If this is the published paper <mark>you might have given away the copyright</mark> and are not allowed to distribute your own work!</li>
+	  <li>Often you are allwed to distribute a <mark>pre-print</mark> or a <mark>post-print</mark> instead.</li>
+	  <li>Check the <mark><a href="http://www.sherpa.ac.uk/romeo/index.php">Sherpa/Romeo</a></mark>
+	  list (and the relevant links there pointing to the individual
+	    publishers) to figure out what you exactly you are allowed to distribute.</li>
+	  <li>Make sure that <mark>essential text to describe the data</mark>
+	  (usually the "Methods" section) is present in any case. You
+	    can always cut & paste the "Methods" part into a text-file (<mark>"fair use"</mark>).</li>
+	</ul>
+    </section>
+    <section>
+      <p class="lonesectitle"><b>Licenses <i class="alert">&amp;</i> Legalese</b></p>
+      <p><b>3. Data you produced</b><p>
+	<ul style="font-size:80%;margin:5px;">
+	  <li style="margin:5px">Is generally <mark>not subject to copyright</mark> (at least in CH and DE).</li>
+	  <li style="margin:5px">Actual law is a palimpset of
+	  international treaties, changing national laws mostly meant for
+	  music tapes, and hazy definitions <mark>-- a mess
+	  --</mark>.</li>
+	  <li style="margin:5px">Realistically you can not do anything to legally prevent other people from using your data in whatever way they like. <mark>Except: Just keep it secret!</mark></li>
+	</ul>
+      <p>To avoid superflous questions and encourage people to give you proper credit for your data:</p>
+      <ul style="font-size:80%;">
+	<li><mark>Put the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons "CC BY"</a> on your data.</mark></li>
+	<li>Prominently provide a <mark>snippet of text</mark> that can be copied and pasted to easily reference your data.</li>
+      </ul>
+
+    </section>
+    <section>
+      <p class="lonesectitle"><b>Licenses <i class="alert">&amp;</i> Legalese</b></p>
+      <p><b>4. Data someone else produced</b><p>
+	Sometimes you should include data produced by pother people to ensure completeness and reproducibility.
+	<ul style="font-size:80%;margin:5px;">
+	  <li style="margin:5px">Is generally <mark>not subject to copyright</mark> (at least in CH and DE).</li>
+	  <li style="margin:5px">EU countries protect the "intellectual creation of
+	  selection and arrangement of databases". <span style="font-size:70%">Lawyers being
+	      lawyers that could be the intellectual creation of putting the column with precip next to the column with intercept.</span>
+	  <li style="margin:5px">To be on the safe side: <mark>re-arrange</mark> such data and use only a <mark>sub-set</mark> if possible.</li>
+	  <li style="margin:5px">Get permission if this is about a substantial part of a real database.</li>
+	  <li style="margin:5px">If in doubt: <mark>Ask for permission!</mark></li>
+	  <li style="margin:5px"><mark><b>Give proper credit!</b></mark></li>
+	  <li style="margin:5px">If this involves patents, ask a lawyer.</li>
+	</ul>
+   
     </section>
   </section>
 
@@ -134,18 +198,15 @@
     <section>
       <div style="text-align:left">	
 	<p><b><mark>Avoid publisher-run repositories!</mark></b><p>
-	
-	<ul>
+	<ul style="font-size:80%;line-height:80%">
 	  <li>not reliable</li>
 	  <li>limited findability</li>
 	  <li>usually no straight forward API</li>
 	</ul>
       </div>
-      <br />
       <div style="text-align:left">
 	<p><b>Prefer <mark>community-run and well established</mark> respositories</b><p>
-	
-	<ol>
+	<ol style="font-size:80%;line-height:80%">
 	  <li>Field specific repositories,<br />
 	    e.g. <a href="https://datadryad.org/">Dryad</a>
 	    (life-sciences), <a href="https://www.pangaea.de/">Pangaea</a>
@@ -153,12 +214,14 @@
 	  <li>Best general purpose repository: <a href="https://zenodo.org/">Zenodo</a></li>
 	</ol>
       </div>
+      <p><mark>Submit publication data to the Eawag Research Data Platform</mark><br /> &#8658; <b>Get Open Data publishing for free (almost)</b></p>
     </section>
   </section>
   
   <section>
     <section>
-      <h1>What about the<br /><div style="text-align:left"> E<i class="alert">awag</i><br />R<i class="alert">esearch</i><br />D<i class="alert">ata</i><br />P<i class="alert">latform</i>?</div></h1>
+      <h1>What about the<br /><div style="text-align:left">
+      E<i class="alert">awag</i><br />R<i class="alert">esearch</i><br />D<i class="alert">ata</i><br />P<i class="alert">latform</i>?</div></h1>
     </section>
     <section>
       <div style="font-size:100%">
