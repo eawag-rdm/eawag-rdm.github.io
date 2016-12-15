@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>EAWAG research Data Management Project: Status and Planning </title>
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui"> -->
+  <link rel="stylesheet" href="css/reveal.css"/>
+  <link rel="stylesheet" href="css/theme/white.css"/>
+  <!-- Code syntax highlighting -->
+  <link rel="stylesheet" href="lib/css/zenburn.css"/>
+  <link rel="stylesheet" href="css/theme/eawag.css"/>
+  <!-- Printing and PDF exports -->
+  <script type="text/javascript">
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+<div class="reveal">
+<div class="slides">
+  <img class="logo" src="assets/eaw-rdm1_inv.png"/>
+  
+  <!-- Title -->
+  <section data-background="assets/eawag_vorlage_blau_background.png" data-state="title">
+    <div class="full">
+      <div class="maintitle_l1">
+	EAWAG <span class="alert">R</span>esearch <span class="alert">D</span>ata<br><span class="alert">M</span>anagement <span class="alert">Project</span>
+      </div>
+      <div class="maintitle_l2">
+	&mdash;  Status and Planning &mdash;
+      </div>
+      <div style="margin-top:600px;">Eawag Lunch Seminar / Dec. 2016</div>
+      <div class="authordate">
+	Harald von Waldow &lt;harald.vonwaldow@eawag.ch&gt; &mdash; 2016-12-15
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div style="float:right;width:50%;text-align:center;">
+      <h2><span class="alert">O</span>verview</h2>
+    </div>
+    <p style="clear:both;">&nbsp;</p>
+    <div style="font-size:90%;">
+      <div class="rightcolumn">
+	<ol start="5">
+	  <li>Cooperation <span class="alert">&</span> Networking</li>
+	  <li><span class="alert">Open Data</span> Strategy</li>
+	  <li>Main <span class="alert">Focus</span> in 2017</li>
+	  <li>Integration with <span class="alert">DORA</span></li>
+	  <li><span class="alert">Summary</span> for Department Heads and <span class="alert">Guidelines</span></li>
+	  <li><span class="alert">Time</span>line</li>
+	</ol>
+      </div>
+      <div class="leftcolumn">
+        <ol style="position:relative;left:1em;">
+      	  <li><span class="alert">Review</span><br />Eawag RDM Project</li>
+      	  <li>A conceptual division:
+      	    <ul style="line-height:10px;margin-top:1ex">
+      	      <li><i><span class="alert">publication</span> data</i></li>
+      	      <li><i><span class="alert">general</span> data</i></li>
+      	    </ul>
+      	  <li>Current Status <b>I</b>:<br /> <span class="alert">Technical implementation</span></li>
+      	  <li>Current Status <b>II</b>: <br /><span class="alert">Human interactions</span></li>
+      	</ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- Review -->
+  <section>
+    <section>
+      <h2><span class="alert">Review</span>:<br />
+      Eawag <span class="alert">R</span>esearch <span class="alert">D</span>ata<br /><span class="alert">M</span>anagement
+	<span class="alert">P</span>roject</h2>
+    </section>
+    <!-- Objectives -->
+    <section>
+      <div style="float:right;width:50%;text-align:left;">
+	<h3><span class="alert">Review</span>:<br />
+	  Eawag <span class="alert">RDM</span> Project</h3>
+      </div>
+      <p style="clear:both;">&nbsp;</p>
+      <div style="float:left;margin-top:-120px;width:45%">
+	<img class="rawimg" src="./assets/cd1.png" width="250px"/>
+	<img class="rawimg" src="./assets/cartoon.png" width="320px"/>
+      </div>
+      <div style="margin-top:-40px;">
+	<h4>Objectives</h4>
+	<ul style="font-size:smaller;">
+	  <li>fulfill Guidelines for<br /><mark>Good Scientific Practice</mark>.</li>
+	  <li>make research data<br /><mark>discoverable, acccessible and usable.</mark></li>
+	  <li>promote research <mark>data reuse</mark>.</li>
+	  <li>facilitate research <mark>data access</mark>.</li>
+	  <li>supplement each Eawag <mark>publication</mark><br />with underlying data.</li>
+	</ul>
+      </div>
+    </section>
+    <!-- Technical Implementation -->
+   <section>
+     <div style="float:right;width:49%;text-align:left;">
+       <h3><span class="alert">Review</span>:<br />
+	 Eawag <span class="alert">RDM</span> Project</h3>
+     </div>
+    <p style="clear:both;">&nbsp;</p>
+    <div style="float:left;margin-top:-150px;">
+      <img class="rawimg" src="./assets/package.png" width="520px"/>
+    </div>
+    <div>
+      <ul style="font-size:smaller;">
+	<li>Webapplication for submission,<br />search and download</li>
+	<li>REST - API</li>
+      	<li>Not an SQL database</li>
+      	<li>Storage unit = <mark><i>package</i></mark></li>
+	<li>Holds arbitrary files</li>
+	<li>Package-level metadata<br />for search</li>
+      </ul>
+    </div>
+   </section>
+   <!-- Organizational Implementation -->
+   <section>
+     <div style="float:right;width:46%;text-align:left;">
+       <h3><span class="alert">Review</span>:<br />
+	 Eawag <span class="alert">RDM</span> Project</h3>
+     </div>
+     <p style="clear:both;">&nbsp;</p>
+     <div style="float:left;margin-top:-130px;">
+       <img class="rawimg" src="./assets/collaboration.png" width="500px"/>
+     </div>
+     <div>
+       <ul style="font-size:smaller;width:47%">
+	 <li>Project supervised and supported by<br /><mark>Steering Group</mark>:
+	   Peter, Rosi, Gabriel, Raoul, Lothar, Jochen.</li>
+	 <li>Researchers act as group/department level <mark>Data Managers</mark>.</li>
+	 <li>Technical and general data mangement <mark>support</mark> by Harald.</li>
+	 <li><mark>Guideline documents</mark> support researchers, group leaders & department heads.</li>
+       </ul>
+     </div>
+   </section>
+  </section>
+  
+  <!-- Conceptual Refinement -->
+  <section>
+    <div style="float:right;width:60%;text-align:left;">
+      <h3>Conceptual <span class="alert">Refinement</span></h3>
+    </div>
+    <div class="rightcolumn" style="clear:both;margin-top:30px;">
+      <b><i><mark>general</mark> data packages</i></b>
+      <br />&nbsp
+      <ul style="font-size:smaller;">
+    	<li>Needs significant work by individual groups.</li>
+    	<li>Needs significant technical and consulting work by me.</li>
+    	<li>Examples: Genetic data, existing databases</li>
+    	<li><span class="alert">TODO</span>:<br /> Take on group-  & department-specifc projects, one at a time.
+      </ul>
+    </div>
+    <div class="leftcolumn" style="margin-top:108px;">
+      <b><i><mark>publication</mark> data  packages</i></b>
+       <br />&nbsp
+       <ul style="font-size:smaller;">
+	 <li>The who, what, when and how is clear.
+	 <li>The technical pre-requisites are met.
+    	 <li>We strive to make this become routine starting 2017.</li>
+	 <li><span class="alert">TODO</span>: workshops / awareness raising</li>
+	 <li><span class="alert">TODO</span>: better documentation</li>
+    </div>
+</section>
+  
+  <!-- Current Status -->
+<section>
+  <section>
+    <h1>Current <span class="alert">Status</span></h1>
+  </section>
+  <!-- Technical Development I -->
+  <section>
+    <div style="float:right;width:60%;text-align:left">
+      <h3><span class="alert">Technical</span> Development</h3>
+    </div>
+     <br />&nbsp
+    <ul>
+      	<li>Upload of <mark><i>publication packages</i></mark> now almost possible
+      	  without or with very little personal guidance.</li>
+      	<li><a href="https://eaw-ckan-dev1.eawag.wroot.emp-eaw.ch">[Demonstration WEB-UI], [Demonstration of some packages]</a></li>
+      	<li>Workarounds for gaps (e.g. spatial input, new entries into
+      	controlled vocabulary) involve manual intervention.</li>
+      	<li>TODO: Good, consolidated, individualized
+      	  technical <mark>documentation</mark>.</li>
+	<li>TODO: Continuous adaptions & improvements</li>
+	<li>TODO: Update search interface</li>
+      </ul>
+  </section>
+  <!-- Technical Development II -->
+  <section>
+    <div style="float:right;width:60%;text-align:left">
+      <h3><span class="alert">Technical</span> Development</h3>
+    </div>
+    <p >&nbsp;</p>
+      <h4 style="clear:both;">Development of <span class="alert">client programs</span>:</h4>
+    <ul>
+      <li><b><a href="https://github.com/eawag-rdm/resup#resup">xlsxtocsv</a></b>: <tt>MS Excel Workbook "xlsx"</tt> &#10137; <tt>CSV (RFC4180).</tt></li>
+      <li><b><a href="https://github.com/eawag-rdm/sav2csv/tree/master#sav2csv">sav2csv</a></b>: IBM SPSS "sav" &#10137; <tt>CSV (RFC4180).</tt></li>
+      <li><b><a href="https://github.com/eawag-rdm/resup#usage">resup</a></b>: Heavy duty bulk upload of resources.</li>
+    </ul>
+    <p>&nbsp;</p>
+    <h4>Behind the scenes functions (<span class="alert">TODO</span>):</h4>
+    <ul>
+      <li>Improve <span class="alert">reliabilty</span> / backup / desater recovery.</li>
+      <li><span class="alert">Versioning</span> and <span class="alert">restricted access</span> option for <i>resources</i>.</li>
+      <li>Improved data <span class="alert">integrity checks</span>.</li>
+    </ul>
+  </section>
+<!-- Human interactions -->
+<section>
+  <div style="float:right;width:60%;text-align:left">
+    <h3><span class="alert">Human</span> interactions</h3>
+  </div>
+    <p >&nbsp;</p>
+    <ul>
+      <li><span class="alert">Numerous meetings</span> with individual researchers who submit <i>publication data packages</i>.</li>
+      <li><span class="alert">In-depth cooperation</span> with some researchers & technicians
+	to streamline submission of other data.</li>
+      <li> No "formal" appointments of <span class="alert">"Group Data Managers"</span> yet, but
+      <li>people who engage to upload data are assigned <span class="alert">admin-rights</span> for their <i>organization</i> (group).</li>
+      <li>From <span class="alert">some users</span> I received <span class="alert">very extensive feedback</span> that
+	finds its way into UI-implementation, documentation & guidelines.</li>
+    </ul>
+  </section>
+</section>
+
+  <!-- Cooperation and Networking -->
+ <section>
+   <div style="float:right;width:64%;text-align:center;margin-top:-30px;">
+     <h3><span class="alert">Cooperation</span> &<br />Networking</h3>
+   </div>
+   <p style="clear:both;"></p>
+   <ul>
+     <li> <span class="alert">WSL</span>: Member of "User Group" for <b>EnviDat</b>:</li>
+     <li style="margin-left:50px;font-size:smaller;">Tracking of developments there.</li>
+     <li style="margin-left:50px;font-size:smaller;">Cooperation on a low technical level.</li>
+     <li style="margin-left:50px;font-size:smaller;">Strategic cooperatation <b>not</b> established.</li>
+     <li> <span class="alert">CKANCon2016 / Madrid</span>: Ties to CKAN core-developer team.</li>
+     <li><span class="alert">Swiss RDM Days / Lausanne</span>:
+     <li style="margin-left:50px;font-size:smaller;">DLCM Project (in touch with ETHZ Library, SIS)</li>
+     <li style="margin-left:50px;font-size:smaller;">In touch with RDM staff from Cambridge.</li>
+   </ul>
+ </section>
+
+ <!--    <section> -->
+<!--       <h4 class="lonesectitle"><span class="alert">ckanext-scheming</span> is the thing!</h4> -->
+<!--       <p align="left"><span class="exampletext">small amendments</span></p> -->
+<!--       <div class="rightcolumn"> -->
+<!-- 	<img src="assets/help_default.png" class="rawimg" /> -->
+<!-- 	<img src="assets/taxa.png" data-fragment-index="1" class="rawimg fragment" /> -->
+<!-- 	<img src="assets/flags.png" data-fragment-index="2"class="rawimg fragment" /> -->
+<!-- 	<pre data-fragment-index="2" class="fragment">eaw_schema_conditional_multicheck.js</pre> -->
+<!--       </div> -->
+<!--       <div class="leftcolumn"> -->
+<!-- 	<ul style="position:relative;top:-40px;"> -->
+<!-- 	  <li>extensive help-modals</li> -->
+<!-- 	  <li>(dynamic) default values</li> -->
+<!-- 	  <li>ckanext-repeating<mark>.js</mark><br />[lcrnz-repeating.js]</li> -->
+<!-- 	  <li data-fragment-index="1"class="fragment">line-by-line textareas</li> -->
+<!-- 	  <li data-fragment-index="2"class="fragment">checkbox array with constraints</li> -->
+<!-- 	</ul> -->
+<!--       </div> -->
+<!--     </section> -->
+<!--     <section> -->
+<!--       <h4 class="lonesectitle"><span class="alert">ckanext-scheming</span> is still the thing!</h4> -->
+<!--       <p align="left"><span class="exampletext">more involved amendments</span><br />&nbsp;<br /> -->
+<!-- 	Use the <mark>SOLR DateRange field</mark> -->
+<!--       </p> -->
+<!--       <div style="float:left;"> -->
+<!-- 	<pre style="width:100%;">def vali_daterange(values) -->
+<!-- validate_solr_daterange.py</pre> -->
+<!--       </div> -->
+<!--       <div style="float:right;"> -->
+<!-- 	<img src="assets/timerange.png" class="rawimg" /> -->
+<!--       </div> -->
+<!--       <div class="fragment"> -->
+<!-- 	<p style="clear:both;text-align:left;"><mark>Index JSON</mark> - store string</p> -->
+<!-- 	<div style="float:left;"> -->
+<!-- 	  <pre style="width:115%;"> -->
+<!-- def eaw_schema_multiple_string_convert(typ) -->
+
+<!-- @scheming_validator -->
+<!-- def eaw_schema_multiple_choice(field, schema) -->
+
+<!-- #IPackageController -->
+<!-- def before_index(self, pkg_dict)</pre> -->
+<!-- 	</div> -->
+<!-- 	<div style="float:right"> -->
+<!-- 	  <pre style="width:100%"><code class="python"> -->
+<!-- json2list_fields = [ -->
+<!--   'substances', -->
+<!--   'variables', -->
+<!--   'systems' -->
+<!--   'timerange', -->
+<!--   'taxa',]</code></pre>  -->
+<!-- 	</div> -->
+<!--       </div> -->
+<!--     </section> -->
+
+<!--       <div class="leftcolumn"> -->
+<!-- 	<p style="text-align:left;margin-top:-40px;"> -->
+
+<!-- 	  <pre style="width:115%;"> -->
+<!-- def eaw_schema_multiple_string_convert(typ) -->
+
+<!-- @scheming_validator -->
+<!-- def eaw_schema_multiple_choice(field, schema) -->
+
+<!-- #IPackageController -->
+<!-- def before_index(self, pkg_dict)</pre> -->
+<!-- 	</p> -->
+
+
+<!-- Conceptual Considerations -->
+
+
+
+<!-- Open Data Strategy-->
+<section>
+  <section>
+    <h1><span class="alert">Open Data</span> Strategy</h1>
+  </section>
+  <section>
+    <div style="float:right;width:60%;text-align:left">
+      <h3>Eawag researchers <span class="alert">want to publish</span> Open Data</h3>
+    </div>
+    <p style="clear:both">There seems to be a <mark>large demand at
+    Eawag</mark> to make <i>publication data packages</i> publicly
+    available. <b>Right now</b>.</p>
+    <h4>Motivations</h4>
+    <ul>
+      <li>Increasing pressure to open up research data (funders, publishers, community).</li>
+      <!-- <figure> -->
+      <!-- <img width="80%" src="assets/snsf_policy.png" /> -->
+      <!-- <figcaption style="font-size:20pt;">André Hoffmann, Nov. 2016 / Lausanne</figcaption> -->
+      <!-- </figure> -->
+      <li>Desire to <mark>demonstrate the high-quality</mark> of the research.</li>
+      <li>Increase <mark>citation count</mark>, increase chances for <mark>cooperation</mark>.</li>
+      <li>Increase <mark>visibility</mark> in the community.</li>
+      <li>Recognition that this can be a powerful <mark>career booster</mark>.</li>
+    </ul>
+  </section>
+  <!-- Change of Plan -->
+  <section style="position:relative;">
+    <div style="float:right;margin-top:-120px;width:60%;text-align:left">
+      <h3>Eawag researchers <span class="alert">want to publish</span> Open Data</h3>
+    </div>
+    <p style="clear:both;"><h4><span class="alert">Change</span> of plan</h4></p>
+    <ul>
+      <li> Aim to enable publishing Open Data <mark>now</mark>.</li>
+      <li> Exploit this demand to foster submissions to RDP:</li>
+      <li style="margin-left:50px;font-size:smaller;">Data organization for RDP similar to that required by external repositories.</li>
+      <li style="margin-left:50px;font-size:smaller;">Submit to RDP, indicate "Open Data".</li>
+      <li style="margin-left:50px;font-size:smaller;">Submission to external repository happens ~&nbsp;automatically.<br />(Currently manually by me).</li>
+    </ul>
+  </section>
+</section>
+
+<!-- Calibration of Focus -->
+<section>
+  <div style="float:right;margin-top:-100px;width:55%;text-align:left">
+    <h3>Main <span class="alert">foci</span> 2017</h3>
+  </div>
+  <ul>
+    <li>Continuation of RDP <mark>software development</mark>.</li>
+    <li>Improvement of RDP reliability and <mark>data safety</mark>.</li> 
+    <li>Production of guidance documents and <mark>documentation</mark>.</li>
+    <li><mark>Awareness raising</mark> measures to foster RDP adoption:</li>
+    <li style="margin-left:50px;font-size:smaller;">Initiate community building, e.g. organize workshops with more general research data management topics.</li>
+    <li style="margin-left:50px;font-size:smaller;">Improve "Open Data Services".</li>
+  </ul>
+</section>
+
+<!-- Integration with DORA -->
+<section>
+  <div style="float:right;margin-top:-140px;width:55%;text-align:left">
+    <h3>Interaction with <span class="alert">DORA</span></h3>
+  </div>
+  <ul>
+    <li>Users will always have to submit publication and data
+      separately to <mark>two different systems</mark>.</li>
+    <li>The <mark>coupling</mark> between the systems is <mark>very loose</mark>.</li>
+    <li>Consistency will be <mark>checked</mark> by periodic background tasks.</li>
+    <li>Consistency will be <mark>enforced</mark> by auto-completion, alerting
+    admins, reminder-emails to users.</li>
+  </ul>
+</section>
+
+<!-- Guidelines -->
+<section>
+  <div style="float:right;margin-top:0;width:55%;text-align:left">
+    <h4><span class="alert">Guidelines</span> for Department Heads and Group Leaders</h4>
+  </div>
+  <!-- 4.1. Checklist for Department and Group Heads -->
+  <ol>
+    <li>Define the data that have to be long-term archived.</li>
+    <!-- That could be for example high quality records of unique and -->
+    <!-- unrepeatable measurements, data underlying landmark publications, -->
+    <!-- otherwise important raw data, legal reasons. -->
+    <li>Develop a metadata concept for all relevant data types.</li>
+    <!-- Keep in mind *reuseability*, *scientific documentation standards* -->
+    <!-- and *reproducibility of results*. -->
+	
+    <li>Establish a protocol that describes how data is submitted to the
+      RDP.</li>
+    <!-- Describe for each type of data (e.g. raw data from -->
+    <!-- measurements, data that supports a publication) *when* and in *which -->
+    <!-- form* it has to be submitted. -->
+    <li>Mark for “restricted access storage” those data that legally can not be
+      disseminated even inside Eawag.</li>
+    <!-- That applies for example to personal data and to data that was -->
+    <!-- obtained under a non-disclosure agreement. -->
+    <li>Define responsible persons for compiling, formatting, annotating
+      and uploading the data.</li>
+    <!-- Different persons can be responsible for different kinds of data. -->
+    <!-- Think also of required quality checks and maintenance needs of the -->
+    <!-- uploaded data. -->
+    <li>Inform all scientists in the department or group.</li>
+    <!-- about the need to archive research data, about the requirement to -->
+    <!-- upload a publication data package along with each publication that is -->
+    <!-- submitted to the -->
+    <!-- [**Eawag institutional publication repository**](https://www.dora.lib4ri.ch/eawag/), -->
+    <!-- and about the departmental data management strategy. -->
+  </ol>
+</section>
+  
+<!-- Time Line -->
+<section>
+  <div style="float:right;margin-top:0;width:55%;text-align:left">
+    <h3><span class="alert">Time</span> Line</h3>
+  </div>
+  <div style="clear:both;text-align:left;">
+    <b>April 2017:</b>&nbsp;&nbsp;RDP goes into production.<br />
+    <br />
+    <b>April 2017 - Dec 2017:</b><br />
+    <ul style="margin-left:100px;">
+      <li>Publication data package submission becomes routine for a large part of Eawag.</li>
+      <li>The publishing of Open Research Data through the RDP increases.</li>
+      <li>RDP is leveraged to address general research data management needs in selected groups.</li>
+    </ul><br />
+    <br />
+    <b>Nov 2017:</b> Strategy Guidelines can be adopted.
+  </div>
+</section>
+  
+<!-- Cartoon -->
+  <section>
+    <div class="full" style="background:white;">
+      <h1><span class="alert">Q</span>uestions?</h1>
+      <br />
+      <img class="rawimg" width="50%" src="assets/cartoon.png" />
+    </div>
+  </section>
+</div>
+</div>
+
+<!-- ####################################################################### -->
+<!-- ####################################################################### -->
+<!-- ####################################################################### -->
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+    <script>
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Vertical centering of slides
+        center: true,
+        // Turns fragments on and off globally
+        fragments: true,
+        // Transition style
+        transition: 'convex', // none/fade/slide/convex/concave/zoom
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1024,
+        height: 768,
+        //width: 1090,
+        //height:1200,
+        // Factor of the display size that should remain empty around the content
+        margin: 0.03,
+        zoomKey: 'shift',
+        // Optional reveal.js plugins
+      dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true },
+          { src: 'plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+  </body>
+</html>
