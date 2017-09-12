@@ -29,7 +29,7 @@ The structure of the document follows the mySNF form for the data management pla
 
 **Question and help text by the SNSF** are quoted at the beginning of each section
 
-.. admonition:: SNSF [#snsf]_
+.. admonition:: SNSF
 
     In a grey box.
 
