@@ -42,9 +42,11 @@ The structure of the document follows the mySNF form for the data management pla
 Help text by the SNSF is quoted at the beginning of each section in a grey box.
 
 .. admonition:: SNSF
+	:class: halfwidth admonition-snsf
 		
-          The SNSF explains how the question is meant.
+        The SNSF explains how the question is meant.
 
+	  
 Instructions
 ^^^^^^^^^^^^
 

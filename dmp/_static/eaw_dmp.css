@@ -28,7 +28,7 @@ div.admonition-snsf.alert-info {
 }
 
 div.admonition-eawag-standard-snippet.alert-info {
-  color: #3c763d;
+  color: #106411;
   background-color: #dff0d8;
   border-color: #d6e9c6;
   padding: 15px;
@@ -37,7 +37,31 @@ div.admonition-eawag-standard-snippet.alert-info {
   border-radius: 4px;
 }
 
-div.navbar-collapse.nav-collapse.collapse.in {
-  background: #178acc;
+div.admonition.note.alert.alert-info {
+  color: #075981;
 }
+
+div.navbar-collapse.nav-collapse.collapse.in {
+  background: #178acc; 
+}
+
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 17px;
+    color: black;
+}
+
+.alert-warning {
+  color: #c74545;
+}
+
+.halfwidth {
+  width: 50%;
+}
+
+footer.footer {
+  color: #999999;
+}
+
+
 
