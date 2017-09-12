@@ -1,0 +1,42 @@
+.navbar-brand {
+  padding: 5px 15px;
+}
+
+h1 {
+  margin-top: 50px;
+}
+
+div#navbar {
+  max-height: 80px;
+}
+
+h1, h2 {
+  color: black;
+}
+
+/* .section > h1, .section > h2 { */
+/*   color: black; */
+/*   background-color: #d4d4d4; */
+
+/* } */
+
+div.admonition-snsf-snsf.alert-info {
+  background-image: linear-gradient(to bottom,#d4d4d4 0,#b8b8b8 100%);
+  color: black;
+  border-color: #999999;
+}
+
+div.admonition-eawag-standard-snippet.alert-info {
+  color: #3c763d;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+div.navbar-collapse.nav-collapse.collapse.in {
+  background: #178acc;
+}
+
