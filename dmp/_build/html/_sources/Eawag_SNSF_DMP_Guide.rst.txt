@@ -832,7 +832,7 @@ distributions, which, in Germany, falls under copyright law. University
 X would like to retain the copyright on the database and therefore it
 will be published without a license that could facilitate re-use.
 
-.. rubric:: Example 3 [#ethz_template]_
+.. rubric:: Example 3 (modified from [#ethz_template]_)
 
 This project is being carried out in collaboration with an industrial
 partner. The intellectual property rights are set out in the
@@ -840,7 +840,7 @@ collaboration agreement. The intellectual property generated from this
 project will be fully exploited with help from the institutional
 Technology Transfer Office. The aim is to patent the final procedure
 and then publish the work in a research journal and to publish the
-supporting data under an open Creative Commons
+supporting data under th Creative Commons
 Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND
 4.0) license.
 
