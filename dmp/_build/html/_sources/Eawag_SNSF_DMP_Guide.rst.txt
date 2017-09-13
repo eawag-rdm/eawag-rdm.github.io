@@ -637,7 +637,8 @@ points and recommendations:
 .. _note_on_encryption:
    
 .. admonition:: Note on encryption
-	  
+    :class: admonition note alert alert-info
+	    
     Consider encrypting sensitive information. In that case, name the
     encryption method, at what stage the data is encrypted, and how
     the encryption key is managed. In particular, consider using
@@ -743,58 +744,62 @@ Instructions
 4. After having established who owns / will own the rights on all
    data, software and other creative works that will be produced or
    used in or by the project, consider the :ref:`Note on licenses
-   <note_on_licenses>` below and state for all data, source code and
-   other output under what terms it will be made available at the end
-   of the project, if so. If parts of the output or pre-existing data
-   can not be made available, state that here, and reference
-   :ref:`Section 4.2 <section4.2>`, where you explain the reasons.
-
-5. If you can make all relevant data, software and other creative
-   works relevant for the project public under the PDDL, MIT License,
-   and CC0, respectively, you might use the :ref:`Eawag standard
-   snippet "default licensing" <eawag_standard_licenses>`.
+   <note_on_licenses>` below. If you can release all relevant data,
+   software and other creative works relevant for the project into the
+   public domain, you might use the :ref:`Eawag standard snippet
+   "default licensing" <eawag_standard_licenses>` and move on.
 
 
-    
+5. Otherwise state for all data, source code and other output under
+   what terms it will be made available at the end of the project, and
+   why it can't be released into the public domain, if applicable. If
+   parts of the output or pre-existing data can not be made available
+   at all, state that here and give the reason.
+
+   If the reasons for not releasing the data, or releasing it under
+   terms that restrict re-use, are related to the presence of
+   "sensitive data" in the sense of :ref:`Section 2.1 <section2.1>`,
+   reference :ref:`Section 4.2 <section4.2>`, where you explain the
+   details.
 
 
+.. _note_on_licenses:
 
-
-  
-
-
-
-.. _note_on_licenses:  
 .. admonition:: Note on licenses
+    :class: admonition note alert alert-info
 
-    \1. Data
-     Pure data, "facts about nature", are not subject to copyright
-     law in Switzerland. However, to make clear to potential users that
-     they can re-use it, explicitly place it in the public domain by
-     applying the `Open Data Commons Public Domain Dedication and License
-     (PDDL) <https://opendatacommons.org/licenses/pddl/>`_.
+    \1. Pure data,
+     "facts about nature", are not subject to
+     copyright law in Switzerland. However, to make clear to potential
+     users that they can re-use it, explicitly place it in the public
+     domain by applying the `CC0 Public Domain Dedication
+     <https://creativecommons.org/publicdomain/zero/1.0/>`_.
      
     \2. Source code
-     falls *sui generis* under copyright law and you need to attach
-     a license to enable re-use. If your code builds on third-party
-     code, check whether the respective license restricts your
-     choice of license (e.g., if you build on code licensed under
-     the GNU General Public License, GPL, you need to publish your
-     code under a compatible license, or not publish it at
-     all). Choose an `OSI approved Open Source License
-     <https://opensource.org/licenses>`_. We recommend the `MIT
-     License <https://opensource.org/licenses/MIT>`_ for clarity
-     and simplicity.
+     falls *sui generis* under copyright law and you need to
+     explicitly waive the copyright to enable unrestricted
+     re-use. Apply the `CC0 Public Domain Dedication
+     <https://creativecommons.org/publicdomain/zero/1.0/>`_.
+
+     If your code builds on third-party code, check whether the
+     respective license restricts your choice of license (e.g., if you
+     build on code licensed under the GNU General Public License, GPL,
+     you need to publish your derived code under a compatible license,
+     or not publish it at all). If you have trouble to sort out your
+     license-entanglements, get in touch with the `Eawag Research Data
+     Management Project \<rdm@eawag.ch\> <rdm@eawag.ch>`_ for help.
 	 
      \3. Other creative output
-      such as text, images, video also falls *sui
-      generis* under copyright law and you need to attach a license to
-      enable re-use. In case you derived such a work from a pre-existing
-      source, check whether restrictions imposed by the license of the
-      original exist and publish your derivative work under a compatible
-      license, if possible. Otherwise, place your work in the public
-      domain by applying the `Creative Commons Public Domain Dedication (CC0)
-      <https://creativecommons.org/publicdomain/zero/1.0/>`_
+      such as text, images, video also falls *sui generis* under
+      copyright law and you need to explicitly waive the copyright to
+      enable unrestricted re-use. Apply the `CC0 Public Domain
+      Dedication
+      <https://creativecommons.org/publicdomain/zero/1.0/>`_.
+     
+      In case you derived such a work from a pre-existing source, check
+      whether restrictions imposed by the license of the original exist
+      and publish your derivative work under a compatible license, if
+      possible.
 		
 
 Examples
@@ -806,13 +811,11 @@ Examples
     :class: admonition-eawag-standard-snippet		
 
     All software, datasets and other creative works from this project
-    will be published under the MIT License, placed in the public
-    domain by applying the Open Data Commons Public Domain Dedication
-    and License (PDDL), or placed in the public domain by applying the
-    Creative Commons Public Domain Dedication (CC0),
-    respectively. Eawag has either unrestricted authority over the
-    dissemination of the data and works to be published, or we have
-    established an agreement to that effect with our collaborators.
+    will be placed in the public domain by applying the Creative
+    Commons Public Domain Dedication (CC0 1.0). Eawag has either
+    unrestricted authority over the dissemination of the data and
+    works to be published, or we have established an agreement to that
+    effect with our collaborators.
 
 .. rubric:: Example 1
 	    
@@ -837,8 +840,8 @@ collaboration agreement. The intellectual property generated from this
 project will be fully exploited with help from the institutional
 Technology Transfer Office. The aim is to patent the final procedure
 and then publish the work in a research journal and to publish the
-supporting data under an open Creative Commons Attribution (CC BY)
-license.
+supporting data under an open Creative Commons Attribution (CC
+BY-NC-ND) license.
 
 Data storage and preservation
 =============================
