@@ -1,4 +1,7 @@
 .. highlight:: rst
+
+.. role:: strike
+    :class: strike
 	       
  
 Data collection and documentation
@@ -1183,8 +1186,8 @@ Instructions
     The SNSF description seems to imply that delayed or forgone
     publication of data is only acceptable for *sensitive* data as
     described in :ref:`Section 2.1 <section2.1>`. We believe there are
-    other valid reasons and suggest <del>you describe them here, if
-    applicable, and trust that SNSF will accept them.</del> you wait
+    other valid reasons and suggest :strike:`you describe them here, if
+    applicable, and trust that SNSF will accept them.` you wait
     until this problem actually materializes at the end of the
     project, describe the issue in the final DMP, and hope that the
     SNSF will accept that.

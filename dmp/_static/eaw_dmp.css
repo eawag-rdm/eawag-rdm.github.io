@@ -63,5 +63,9 @@ footer.footer {
   color: #999999;
 }
 
+.strike {
+  text-decoration: line-through;
+}
+
 
 
