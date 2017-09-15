@@ -68,13 +68,19 @@ ol.twocolslist {
   font-size: 1.0em;
   bottom: 300px; }
 
+.reveal section .license {
+  position:absolute;
+  bottom: 0px;
+  font-size: 30%;
+}
 .reveal section .authordate {
   font-size: 0.6em;
   position: absolute;
   bottom: 0px;
-  left: 0px;
   font-family: mono;
-  color: #045A78; }
+  color: #045A78;
+  left: 100px;
+}
 
 .reveal section .lonesectitle {
   margin-top: 70px; }
