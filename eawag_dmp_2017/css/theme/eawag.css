@@ -68,6 +68,29 @@ ol.twocolslist {
   font-size: 1.0em;
   bottom: 300px; }
 
+.reveal img.titlepageicon {
+  margin: 0;
+  vertical-align:middle;
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+
+.reveal span.pdfdltext {
+  display:inline-block;
+  margin-left:10px;
+  vertical-align:middle;
+}
+  
+.reveal section .pdfdownload {
+  float:left;
+  height:40px;
+  position:absolute;
+  bottom:40px;
+  font-size:16px;
+  text-align:left;
+}
+
 .reveal section .license {
   position:absolute;
   bottom: 0px;
