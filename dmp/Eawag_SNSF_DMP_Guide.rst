@@ -333,7 +333,7 @@ Conceptualize two types of metadata: **1. Scientific metadata** and
 Scientific metadata provides all necessary information to correctly
 understand, interpret, assess, replicate (within limits), build upon,
 and generally use your data. This metadata might be compiled
-"free-form" into a single README-file that accompanies the
+"free-form" into one or several README-file(s) that accompany the
 data.
 
 Certain fields have formally defined established metadata standards,
@@ -365,6 +365,18 @@ This metadata could contain for example:
 * Suggestions for how to best reuse the data.
 * Any information suited to decrease the chances that a future user of
   the data needs to contact you with questions.
+
+**Describe, as detailed as possible, what will comprise the scientific
+metadata.**  Make sure to mention all information, or information
+categories, that a future user of your data will need to read and
+interpret the data.
+
+**Describe how this metadata will be managed,** i.e. who or what will
+generate it when, in what form it is stored in which location, and how
+it is associated with the respective experiment, measurement, or
+observation. Describe technical aspects of the metadata management,
+e.g. the use of database software, and the protocol or mechanism to
+handle updates and version control, if applicable.
 
 .. rubric:: 2. General metadata
 
@@ -1186,33 +1198,26 @@ Instructions
     The SNSF description seems to imply that delayed or forgone
     publication of data is only acceptable for *sensitive* data as
     described in :ref:`Section 2.1 <section2.1>`. We believe there are
-    other valid reasons and suggest :strike:`you describe them here, if
-    applicable, and trust that SNSF will accept them.` you wait
-    until this problem actually materializes at the end of the
-    project, describe the issue in the final DMP, and hope that the
-    SNSF will accept that.
+    other valid reasons and suggest you wait until this problem
+    actually materializes at the end of the project, describe the
+    issue in the final DMP, and hope that the SNSF will accept that.
 
-Possible reasons for delayed publication could for example include:
+Possible reasons for delayed publication (accepted by SNSF) could
+for example include:
 
 * The time necessary to anonymize personal data.
+* The need to keep patentable information secret until patent protection applies.
+
+Possible reasons for delayed publication, which are **currently not
+accepted** by SNSF, include for example:
+
 * The intent to synchronize the publication of the data with other
   publications (e.g. project report, paper, press release) to
   maximize visibility and impact.
 * The intent to base follow-up publications on the data, after the
   project has finished.
-* The need to keep patentable information secret until patent protection applies.
-
-.. note::
-
-   You might be reluctant to publish your data for reasons that are
-   both rational and likely not acceptable for SNSF, as exemplified in
-   `this blog post
-   <http://ecologybits.com/index.php/2016/06/15/open-data-authorship-and-the-early-career-scientist/>`_. If
-   you have such concerns, please get in touch with the `Eawag Research Data
-   Management Project \<rdm@eawag.ch\> <rdm@eawag.ch>`_.
-
-   
-   
+* The intent to couple re-use of the data by other groups to an offer for collaboration.
+  
 
 Examples
 ^^^^^^^^
