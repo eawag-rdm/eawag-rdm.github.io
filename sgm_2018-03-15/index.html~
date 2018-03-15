@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Eawag Research Data Management: Status and Challenges</title>
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui"> -->
+  <link rel="stylesheet" href="css/reveal.css"/>
+  <link rel="stylesheet" href="css/theme/white.css"/>
+  <!-- Code syntax highlighting -->
+  <link rel="stylesheet" href="lib/css/zenburn.css"/>
+  <!-- Eawag style-sheet -->
+  <link rel="stylesheet" href="css/theme/eawag.css"/>
+</head>
+
+<body>
+<div class="reveal">
+<div class="slides">
+  <img class="logo" src="assets/eaw-rdm1_inv.png"/>
+  
+  <!-- Title -->
+  <section data-background="assets/eawag_vorlage_blau_background.png" data-state="title">
+    <div class="full">
+      <div class="maintitle_l1">
+	<span class="alert">WSL Envidat User Group Meeting:</span><br />Eawag Research Data
+      </div>
+      <div class="maintitle_l2">
+	&mdash;  current status and challenges &mdash;
+      </div>
+      <!-- <div style="margin-top:600px;">Description of the event, if applicable</div> -->
+      
+      <div class="pdfdownload">
+	<a href="pdf/output.pdf">
+	  <img class="titlepageicon" src="assets/pdf.svg" alt="pdf-download" />
+	  <span class="pdfdltext">download<br>PDF (869 kB)</span>
+	</a>
+      </div>
+      <div class="license">
+      <a rel="license" href="http://creativecommons.org/publicdomain/zero/1.0/">
+	<img class="titlepageicon" alt="CC0" src="assets/CC0_button.svg" />
+      </a>
+      </div>
+      
+      <div class="authordate">
+	Harald von Waldow &lt;harald.vonwaldow@eawag.ch&gt; &mdash; 2018-03-13
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div style="float:right;width:50%;text-align:center;margin-top:-100px;">
+      <h2><span class="alert">O</span>verview</h2>
+    </div>
+    <p style="clear:both;">&nbsp;</p>
+    <div>
+      <ol>
+	<li><span class="alert">technical infrastructure
+	development:</span><br /> ERIC-internal, ERIC-public,
+	ERIC-control<br />(ERIC = <i>Eawag Research Data Institutional
+	Repository</i>)</li>
+	<li><span class="alert">support activities:</span><br /> consulting w.r.t. "open data", DMP, general data management</li>
+	<li><span class="alert">other tasks:</span><br /> policy development, outreach</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Infrastructure -->
+  <section>
+    <section>
+      <h2 ><span class="alert">Infrastructure</span><br />
+	<span style="font-size:80%;">
+	  Software <span class="alert">d</span>evelopment<br />
+	  <span class="alert">&</span><br />
+	  <span class="alert">s</span>ystem administration
+	</span>
+      </h2>
+    </section>
+    
+    <!-- Eric-internal -->
+    <section>
+      <div style="float:right;width:50%;text-align:center;margin-top:-190px;">
+      	<h3><span class="alert">ERIC-internal</span></h3>
+      </div>
+      <ul>
+	<li>Integrated <span class="alert">user-feedback</span> from public beta</li>
+	<li>Added some necessary <span class="alert">features</span> (private data, publication package workflow)</li>
+	<li>Connected to <span class="alert">11 TB</span> fast storage</li>
+	<li>SOLR index in Postgres DB in <span class="alert">separate VM</span></li>
+      </ul>
+    </section>
+    <section>
+      <div style="float:right;width:50%;text-align:center;margin-top:-100px;">
+      	<h3><span class="alert">ERIC-internal</span></h3>
+      </div>
+      <p>Improved support for <mark>publication data packages</mark>:</p>
+      <div>
+	<img class="rawimg" width="90%" src="assets/eric_package.png" />
+      </div>
+    </section>
+    <section>
+      <div style="float:right;width:50%;text-align:center;margin-top:-60px;">
+      	<h3><span class="alert">ERIC-internal</span></h3>
+      </div>
+      <p>Improved representation of the <mark>organizational structure</mark>:</p>
+      <div>
+	<img class="rawimg" width="75%" src="assets/eric_organization.png" />
+      </div>
+    </section>
+    <section>
+      <div style="float:right;width:50%;text-align:center;margin-top:-60px;">
+      	<h3><span class="alert">ERIC-internal</span></h3>
+      </div>
+      <p>Improved representation of the <mark>organizational structure</mark>:</p>
+      <div>
+	<img class="rawimg" width="70%" src="assets/eric_organization_2.png" />
+      </div>
+    </section>
+  </section>
+    
+  <!-- ERIC-public-->
+  <section>
+    <div style="float:right;width:50%;text-align:center;margin-top:-170px;">
+      <h3><span class="alert">ERIC-public</span></h3>
+    </div>
+    <ul>
+      <li>Separate <span class="alert">stripped-down</span> (no user-management and package upload) CKAN instance.</li>
+      <li>Separate (logical) storage: Exploit <span class="alert">FS-level deduplication.</span></li>
+      <li>Separate Index and DB <span class="alert">(next step).</span></li>
+      <li>In the <span class="alert">DMZ.</span></li>
+      <li>Consider it <span class="alert">hacked.</span></li>
+    </ul>
+  </section>
+</section>
+
+<!-- Eric-control -->
+<section>
+  <div style="float:right;width:50%;text-align:center;margin-top:-100px;">
+       <h3 style="line-height:60%;">Eric-control<br /><span class="alert" style="font-size:60%;">DOI-minting<br />public-internal-management<br />DORA integration</span></h3>
+     </div>
+     <p style="clear:both;"></p>
+     <ul>
+       <li><span class="alert">DOI minting works</span> semi-automatically (fill a
+       JSON-template)<br />There will be always a manual step
+       (correctness check)<br /> A workflow augmented with a GUI needs
+       to be established in the long run.</li>
+       <li><span class="alert">public-internal-management</span>: Not even
+       started.<br />I envision an independent
+       micro-service.<br />Start with CLI-scripts.</li>
+       <li><span class="alert">DORA-integration</span>: postponed indefinitely.</li>
+     </ul>
+   </section>
+  </section> <!-- / Infrastructure -->
+   
+   <!-- Support -->
+   <section>
+     <section>
+       <h2 ><span class="alert">Support</span><br />
+	 <span style="font-size:80%;">
+	   <span class="alert">c</span>onsultancy <span class="alert">&amp; </span>service<span class="alert">s</span>
+	 </span>
+       </h2>
+     </section>
+
+     <section> <!-- Consultancy & Services 1 -->
+       <div style="float:right;width:50%;text-align:right;margin-top:-80px;">
+	 <h3 style="line-height:75%;">Consultancy<br />
+	   <span class="alert">&amp;</span> Services</h3>
+       </div>
+       <p style="clear:both;"></p>
+       <ul>
+	 <li><span class="alert">Storage procurement:</span>
+	   <blockquote>We want to move 5 TB from external
+	       HDs to somewhere</blockquote> =&gt;
+	   develop <mark>IT-policy</mark> for shared storage access,
+	   develop <mark>intra-IT workflow</mark>, act as first
+	   contact for <mark>storage management</mark>.</li>
+	 <li><span class="alert">SNSF Data Management Plan:</span>
+	   Individual reviews, <a href="https://opendata.eawag.ch/dmp/">SNSF DMP
+	     Guide</a>, workshops.</li>
+	 <li><span class="alert">"Open Data"</span>, data journals, data publication strategy, ...</li>
+	 <li><span class="alert">General data management:</span> data bases, workflow, project planning, file formats, software, ...</li>
+       </ul>
+     </section>
+     
+     <section> <!-- Consultancy & Services 2 -->
+       <div style="float:right;width:50%;text-align:right;margin-top:-160px;">
+	 <h3 style="line-height:75%;">Consultancy<br />
+	   <span class="alert">&amp;</span> Services</h3>
+       </div>
+       <p style="clear:both;"></p>
+       <ul>
+	 <li>ERIC <span class="alert">support</span> & workshops</li>
+	 <li>ERIC <span class="alert">system administration</span></li>
+	 <li><mark>data package quality control</mark>:<br />calculate <span class="alert">~1 hr per data package</span></li>
+	 <li><span class="alert">DOI</span> management:
+	   <ul> <!-- style="line-height:20%;"> -->
+	     <li style="margin:0;">Still quite manual</li>
+	     <li style="margin:0;">currently involves Zenodo or other public repository</li>
+	   </ul>
+	 </li>
+       </ul>
+     </section>
+   </section> <!-- /Support -->
+   
+   <!-- Other -->
+   <section>
+     <section>
+       <h2><span class="alert">Other</span><br />
+	 <span style="font-size:80%;"><span class="alert">o</span>utreach <span class="alert">&amp;</span>
+	 policy <span class="alert">d</span>evelopment</span></h2>
+     </section>
+     
+     <section> <!-- Outreach & Policy -->
+       <div style="float:right;width:50%;text-align:right;margin-top:-100px;">
+	 <h3 style="line-height:75%;">Outreach<br />
+	   <span class="alert">&amp;</span> Policy</h3>
+       </div>
+       <p style="clear:both;"></p>
+       <ul>
+	 <li>Development of an <mark>Eawag data archival policy</mark></li>
+	 <img class="rawimg" src="assets/rdm_policy_snippet.png" />
+	 <li>Maintenance of Eawag research data
+	 management <mark>website</mark>: <a href="https://opendata.eawag.ch">opendata.eawag.ch</a> </li>
+       </ul>
+     </section>
+   </section> <!-- / Other -->
+   
+   <!-- Cartoon -->
+  <section>
+    <div class="full" style="background:white;">
+      <h1><span class="alert">Q</span>uestions?</h1>
+      <br />
+      <img class="rawimg" width="50%" src="assets/cartoon.png" />
+    </div>
+  </section>
+  </section>
+
+
+<!-- ####################################################################### -->
+<!-- ####################################################################### -->
+<!-- ####################################################################### -->
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+    <script>
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Vertical centering of slides
+        center: true,
+        // Turns fragments on and off globally
+        fragments: true,
+        // Transition style
+        transition: 'convex', // none/fade/slide/convex/concave/zoom
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1024,
+        height: 768,
+        //width: 1090,
+        //height:1200,
+        // Factor of the display size that should remain empty around the content
+        margin: 0.03,
+        zoomKey: 'shift',
+        // Optional reveal.js plugins
+      dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true },
+          { src: 'plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+  </body>
+</html>
